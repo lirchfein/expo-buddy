@@ -4,8 +4,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.4.4'
 
 
+# Added by us
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'dotenv-rails', groups: [:development, :test]
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -70,3 +72,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Image uploading
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
