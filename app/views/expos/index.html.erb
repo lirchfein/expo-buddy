@@ -1,14 +1,10 @@
   <h1>Expos#index</h1>
 <div class="card-container">
   <div class="row">
-    <div class="col-xs-12 col-md-6 col-lg-4">
-      <%= render 'components/card' %>
-    </div>
-    <div class="col-xs-12 col-md-6 col-lg-4">
-      <%= render 'components/card' %>
-    </div>
-    <div class="col-xs-12 col-md-6 col-lg-4">
-      <%= render 'components/card' %>
-    </div>
+    <% @expos.each do |expo| %>
+      <div class="col-xs-12 col-md-6 col-lg-4">
+        <%= render 'components/card', expo: expo %>
+      </div>
+    <% end %>
   </div>
 </div>
