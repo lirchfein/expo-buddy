@@ -1,0 +1,18 @@
+.expo-header {
+  height: 24vh;
+  background-size: cover !important;
+  position: relative;
+}
+
+.exhibitor-header-white-box {
+  background: white;
+  width: auto;
+  display: inline-block;
+  padding: 5px;
+  position: absolute;
+  bottom: 15px;
+  left: 30px;
+  h1 {
+    margin-top: 10px;
+  }
+}
