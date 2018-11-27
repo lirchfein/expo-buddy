@@ -15,7 +15,7 @@ puts 'Creating expos ...'
 User.create!(first_name: 'Our', last_name: 'Team', email: 'ourteam@lewagon.com', avatar: 'https://c.tribune.com.pk/2018/09/1815077-deadppol_insing-1538295729-229-640x480.jpg')
 
 Expo.create!(name: 'IFA', start_date: '06/09/2019', end_date: '11/09/2019',
-  cover_pic: 'https://cdn.worldvectorlogo.com/logos/ifa.svg',
+  cover_pic: 'https://res.cloudinary.com/dfcud6por/image/upload/v1543315786/expo-buddy/header_ifa.png',
   exhibitors_num: 1814, visitors_num: 100, square_meters: 161200,
   # description: 'IFA 2018 has not only hosted more innovation and product launches than any previous event, it also presented more digital lifestyle products in one place than any other show worldwide.',
   city: 'Berlin',  address: 'Messegelände Berlin ExpoCenter City Messedamm 22 14055 Berlin')
