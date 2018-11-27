@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'pages/home'
+  devise_for :users
+  resources :expos, only: %i[index show create] do
+    resources :exhibitors, only: %i[show create]
+  end
+
+  root to: 'pages#home'
 end

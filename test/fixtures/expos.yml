@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  start_date: 2018-11-26
+  end_date: 2018-11-26
+  cover_pic: MyString
+  exhibitors: 1
+  visitors: 1
+  square_meters: 1
+  description: MyString
+  city: MyString
+
+two:
+  name: MyString
+  start_date: 2018-11-26
+  end_date: 2018-11-26
+  cover_pic: MyString
+  exhibitors: 1
+  visitors: 1
+  square_meters: 1
+  description: MyString
+  city: MyString
