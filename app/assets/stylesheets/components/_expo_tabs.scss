@@ -1,0 +1,38 @@
+.expo-tabs {
+  display: flex;
+  width: 100%;
+  height: 5vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.left-expo-tab {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.right-expo-tab {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tab-title {
+  h1{
+    margin: 0;
+  }
+}
+
+.toggle-border {
+  border-bottom: 3px;
+  border-bottom-color: rgba(0,0,0,0.8);
+  border-bottom-style: solid;
+}
