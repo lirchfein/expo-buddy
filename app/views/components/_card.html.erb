@@ -1,4 +1,4 @@
-<div class="card" style="background-image: url('https://res.cloudinary.com/dfcud6por/image/upload/v1543315786/expo-buddy/header_ifa.png');">
+<div class="card" style="background-image: url('<%= cl_image_path(expo.cover_pic) %>');">
   <div class="card-content">
     <div class="card-text">
       <% expo.start_date.month == expo.start_date.month ? start_d = expo.start_date.day.to_s + '.' : start_d = expo.start_date.strftime('%d. %b')%>
