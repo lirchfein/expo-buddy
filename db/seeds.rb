@@ -6,10 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
 Expo.destroy_all
 Exhibitor.destroy_all
 
 puts 'Creating expos ...'
+
+User.create!(first_name: 'Our', last_name: 'Team', email: 'ourteam@lewagon.com', avatar: 'https://c.tribune.com.pk/2018/09/1815077-deadppol_insing-1538295729-229-640x480.jpg')
 
 Expo.create!(name: 'IFA', start_date: '06/09/2019', end_date: '11/09/2019',
   cover_pic: 'https://cdn.worldvectorlogo.com/logos/ifa.svg',
