@@ -1,5 +1,10 @@
-<%= render 'components/exhibitor_banner', exhibitor: @exhibitor %>
+<div class="page">
 
-<p class="blocks"><%=  @exhibitor.location %></p>
-<p class="blocks"><%= @exhibitor.description %></p>
+  <%= render 'components/exhibitor_banner', exhibitor: @exhibitor %>
 
+  <p class="blocks"><%=  @exhibitor.location %></p>
+  <p class="blocks"><%= @exhibitor.description %></p>
+
+  <%= render 'components/exhibitor_tabs' %>
+
+</div>

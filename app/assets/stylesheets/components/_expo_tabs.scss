@@ -5,10 +5,16 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: sticky;
-  top: 24vh;
+  // position: sticky;
+  // top: 24vh;
   z-index: 2;
   background-color: white;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
 }
 
 .left {
@@ -34,9 +40,7 @@
 }
 
 .tab-title {
-  h1{
-    margin: 0;
-  }
+  font-size: 60px;
 }
 
 .toggle-border {
