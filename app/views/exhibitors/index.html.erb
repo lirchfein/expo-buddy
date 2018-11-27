@@ -1,79 +1,9 @@
 <%= render 'components/expo_banner', expo: @expo %>
-
-
+<%= render 'components/expo-tabs' %>
 <div class="other-page-content">
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
-<p>iii</p>
+  <% @expo.exhibitors.each do |exhibitor| %>
+    <%= render 'components/exhibitor_list_item', exhibitor: exhibitor %>
+  <% end %>
 </div>
 
 
