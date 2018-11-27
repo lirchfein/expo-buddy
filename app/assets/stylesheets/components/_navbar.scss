@@ -1,0 +1,15 @@
+.navbar {
+  height: 7vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#empty-div {
+  flex-grow: 1;
+}
+
+.navbar-icons {
+  padding: 20px;
+}
