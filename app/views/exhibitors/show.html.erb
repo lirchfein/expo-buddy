@@ -1,2 +1,10 @@
-<h1>Test quand même foncitonne stp</h1>
-<%= render 'components/exhibitor_header', exhibitor: @exhibitor %>
+<div class="page">
+
+  <%= render 'components/exhibitor_banner', exhibitor: @exhibitor %>
+
+  <p class="blocks"><%=  @exhibitor.location %></p>
+  <p class="blocks"><%= @exhibitor.description %></p>
+
+  <%= render 'components/exhibitor_tabs' %>
+
+</div>
