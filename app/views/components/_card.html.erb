@@ -1,11 +1,12 @@
 <div class="card" style="background-image: url('https://res.cloudinary.com/dfcud6por/image/upload/v1543315786/expo-buddy/header_ifa.png');">
   <div class="card-content">
     <div class="card-text">
-      <p>6. - 11. Sept., 2019</p>
+      <% expo.start_date.month == expo.start_date.month ? start_d = expo.start_date.day.to_s + '.' : start_d = expo.start_date.strftime('%d. %b')%>
+      <p><%= start_d %> - <%= expo.end_date.strftime('%d. %b %Y') %></p>
       <h1><%= expo.name %></h1>
     </div>
     <div class="card-text small-margin-top">
-      <p>1805 exhibitors | 253 000 visitors | 159 000 m2</p>
+      <p><%= expo.exhibitors_num %> exhibitors | <%= expo.visitors_num %> visitors | <%= expo.square_meters %> m2</p>
     </div>
   </div>
  <div class="bookmark-container bookmark-card">
