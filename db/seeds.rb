@@ -10,9 +10,12 @@ User.destroy_all
 Expo.destroy_all
 Exhibitor.destroy_all
 
-puts 'Creating expos ...'
+puts 'Creating users ...'
 
-User.create!(first_name: 'Our', last_name: 'Team', email: 'ourteam@lewagon.com', avatar: 'https://c.tribune.com.pk/2018/09/1815077-deadppol_insing-1538295729-229-640x480.jpg')
+User.create!(first_name: 'Our', last_name: 'Team', email: 'ourteam@lewagon.com', password: '111222',
+  avatar: 'https://c.tribune.com.pk/2018/09/1815077-deadppol_insing-1538295729-229-640x480.jpg')
+
+puts 'Creating expos ...'
 
 Expo.create!(name: 'IFA', start_date: '06/09/2019', end_date: '11/09/2019',
   cover_pic: 'https://res.cloudinary.com/dfcud6por/image/upload/v1543315786/expo-buddy/header_ifa.png',
@@ -46,105 +49,106 @@ Expo.create!(name: 'Computex', start_date: '28/05/2019', end_date: '01/06/2019',
 
 puts 'Creating exhibitors ...'
 
+p Expo.first.id
 
 Exhibitor.create!(name: 'Acer', icon: 'https://www.designtagebuch.de/wp-content/uploads/mediathek//2011/04/acer-logo-600x300.png', location: 'Hall 12 / 108',
   description: 'Founded in 1976, today Acer is one of the world’s top ICT companies and has a presence in over 160 countries. As Acer looks into the future, it is focused on enabling a world where hardware, software and services will infuse with one another to open up new possibilities for consumers and businesses alike.',
-  product_category: 'communication devices', expo_id: 1)
+  product_category: 'communication devices', expo_id: Expo.first.id)
 
 Exhibitor.create!(name: 'Acer', icon: 'https://www.designtagebuch.de/wp-content/uploads/mediathek//2011/04/acer-logo-600x300.png', location: 'Hall 12 / 108',
   description: 'Founded in 1976, today Acer is one of the world’s top ICT companies and has a presence in over 160 countries. As Acer looks into the future, it is focused on enabling a world where hardware, software and services will infuse with one another to open up new possibilities for consumers and businesses alike.',
-  product_category: 'communication devices', expo_id: 2)
+  product_category: 'communication devices', expo_id: Expo.first.id + 1)
 
 Exhibitor.create!(name: 'Acer', icon: 'https://www.designtagebuch.de/wp-content/uploads/mediathek//2011/04/acer-logo-600x300.png', location: 'Hall 12 / 108',
   description: 'Founded in 1976, today Acer is one of the world’s top ICT companies and has a presence in over 160 countries. As Acer looks into the future, it is focused on enabling a world where hardware, software and services will infuse with one another to open up new possibilities for consumers and businesses alike.',
-  product_category: 'communication devices', expo_id: 3)
+  product_category: 'communication devices', expo_id: Expo.first.id + 2)
 
 Exhibitor.create!(name: 'Acer', icon: 'https://www.designtagebuch.de/wp-content/uploads/mediathek//2011/04/acer-logo-600x300.png', location: 'Hall 12 / 108',
   description: 'Founded in 1976, today Acer is one of the world’s top ICT companies and has a presence in over 160 countries. As Acer looks into the future, it is focused on enabling a world where hardware, software and services will infuse with one another to open up new possibilities for consumers and businesses alike.',
-  product_category: 'communication devices', expo_id: 4)
+  product_category: 'communication devices', expo_id: Expo.first.id + 3)
 
 Exhibitor.create!(name: 'Acer', icon: 'https://www.designtagebuch.de/wp-content/uploads/mediathek//2011/04/acer-logo-600x300.png', location: 'Hall 12 / 108',
   description: 'Founded in 1976, today Acer is one of the world’s top ICT companies and has a presence in over 160 countries. As Acer looks into the future, it is focused on enabling a world where hardware, software and services will infuse with one another to open up new possibilities for consumers and businesses alike.',
-  product_category: 'communication devices', expo_id: 5)
+  product_category: 'communication devices', expo_id: Expo.first.id + 4)
 
 Exhibitor.create!(name: 'Schneider', icon: 'https://cdn.worldvectorlogo.com/logos/schneider-2.svg', location: 'Hall 9 / 107',
   description: 'Pioneer in the design of television sets in France, Schneider has been producing models with distinctive design and recognised quality for over 80 years. Since its creation, the brand has been committed to making technology accessible to everyone. ',
-  product_category: 'Home Entertainment & VR', expo_id: 1)
+  product_category: 'Home Entertainment & VR', expo_id: Expo.first.id)
 
 Exhibitor.create!(name: 'Schneider', icon: 'https://cdn.worldvectorlogo.com/logos/schneider-2.svg', location: 'Hall 9 / 107',
   description: 'Pioneer in the design of television sets in France, Schneider has been producing models with distinctive design and recognised quality for over 80 years. Since its creation, the brand has been committed to making technology accessible to everyone. ',
-  product_category: 'Home Entertainment & VR', expo_id: 2)
+  product_category: 'Home Entertainment & VR', expo_id: Expo.first.id + 1)
 
 Exhibitor.create!(name: 'Schneider', icon: 'https://cdn.worldvectorlogo.com/logos/schneider-2.svg', location: 'Hall 9 / 107',
   description: 'Pioneer in the design of television sets in France, Schneider has been producing models with distinctive design and recognised quality for over 80 years. Since its creation, the brand has been committed to making technology accessible to everyone. ',
-  product_category: 'Home Entertainment & VR', expo_id: 3)
+  product_category: 'Home Entertainment & VR', expo_id: Expo.first.id + 2)
 
 Exhibitor.create!(name: 'Schneider', icon: 'https://cdn.worldvectorlogo.com/logos/schneider-2.svg', location: 'Hall 9 / 107',
   description: 'Pioneer in the design of television sets in France, Schneider has been producing models with distinctive design and recognised quality for over 80 years. Since its creation, the brand has been committed to making technology accessible to everyone. ',
-  product_category: 'Home Entertainment & VR', expo_id: 4)
+  product_category: 'Home Entertainment & VR', expo_id: Expo.first.id + 3)
 
 Exhibitor.create!(name: 'Schneider', icon: 'https://cdn.worldvectorlogo.com/logos/schneider-2.svg', location: 'Hall 9 / 107',
   description: 'Pioneer in the design of television sets in France, Schneider has been producing models with distinctive design and recognised quality for over 80 years. Since its creation, the brand has been committed to making technology accessible to everyone. ',
-  product_category: 'Home Entertainment & VR', expo_id: 5)
+  product_category: 'Home Entertainment & VR', expo_id: Expo.first.id + 4)
 
 Exhibitor.create!(name: 'Arte', icon: 'https://banner2.kisspng.com/20180715/qrr/kisspng-bury-me-my-love-arte-france-logo-force-de-proposition-5b4afdbcaa3843.2003927015316412766972.jpg', location: 'Hall 2.2 / 103',
   description: 'ARTE - leading channel of European Culture',
-  product_category: 'TV', expo_id: 1)
+  product_category: 'TV', expo_id: Expo.first.id)
 
 Exhibitor.create!(name: 'Arte', icon: 'https://banner2.kisspng.com/20180715/qrr/kisspng-bury-me-my-love-arte-france-logo-force-de-proposition-5b4afdbcaa3843.2003927015316412766972.jpg', location: 'Hall 2.2 / 103',
   description: 'ARTE - leading channel of European Culture',
-  product_category: 'TV', expo_id: 2)
+  product_category: 'TV', expo_id: Expo.first.id + 1)
 
 Exhibitor.create!(name: 'Arte', icon: 'https://banner2.kisspng.com/20180715/qrr/kisspng-bury-me-my-love-arte-france-logo-force-de-proposition-5b4afdbcaa3843.2003927015316412766972.jpg', location: 'Hall 2.2 / 103',
   description: 'ARTE - leading channel of European Culture',
-  product_category: 'TV', expo_id: 3)
+  product_category: 'TV', expo_id: Expo.first.id + 2)
 
 Exhibitor.create!(name: 'Arte', icon: 'https://banner2.kisspng.com/20180715/qrr/kisspng-bury-me-my-love-arte-france-logo-force-de-proposition-5b4afdbcaa3843.2003927015316412766972.jpg', location: 'Hall 2.2 / 103',
   description: 'ARTE - leading channel of European Culture',
-  product_category: 'TV', expo_id: 4)
+  product_category: 'TV', expo_id: Expo.first.id + 3)
 
 Exhibitor.create!(name: 'Arte', icon: 'https://banner2.kisspng.com/20180715/qrr/kisspng-bury-me-my-love-arte-france-logo-force-de-proposition-5b4afdbcaa3843.2003927015316412766972.jpg', location: 'Hall 2.2 / 103',
   description: 'ARTE - leading channel of European Culture',
-  product_category: 'TV', expo_id: 5)
+  product_category: 'TV', expo_id: Expo.first.id + 4)
 
 Exhibitor.create!(name: 'Samsung', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1280px-Samsung_Logo.svg.png', location: 'Hall A CityCube / 102',
   description: 'Samsung Electronics inspires the world and shapes the future with transformative ideas and technologies that give people the power to discover new experiences.',
-  product_category: 'communication devices', expo_id: 1)
+  product_category: 'communication devices', expo_id: Expo.first.id)
 
 Exhibitor.create!(name: 'Samsung', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1280px-Samsung_Logo.svg.png', location: 'Hall A CityCube / 102',
   description: 'Samsung Electronics inspires the world and shapes the future with transformative ideas and technologies that give people the power to discover new experiences.',
-  product_category: 'communication devices', expo_id: 2)
+  product_category: 'communication devices', expo_id: Expo.first.id + 1)
 
 Exhibitor.create!(name: 'Samsung', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1280px-Samsung_Logo.svg.png', location: 'Hall A CityCube / 102',
   description: 'Samsung Electronics inspires the world and shapes the future with transformative ideas and technologies that give people the power to discover new experiences.',
-  product_category: 'communication devices', expo_id: 3)
+  product_category: 'communication devices', expo_id: Expo.first.id + 2)
 
 Exhibitor.create!(name: 'Samsung', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1280px-Samsung_Logo.svg.png', location: 'Hall A CityCube / 102',
   description: 'Samsung Electronics inspires the world and shapes the future with transformative ideas and technologies that give people the power to discover new experiences.',
-  product_category: 'communication devices', expo_id: 4)
+  product_category: 'communication devices', expo_id: Expo.first.id + 3)
 
 Exhibitor.create!(name: 'Samsung', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1280px-Samsung_Logo.svg.png', location: 'Hall A CityCube / 102',
   description: 'Samsung Electronics inspires the world and shapes the future with transformative ideas and technologies that give people the power to discover new experiences.',
-  product_category: 'communication devices', expo_id: 5)
+  product_category: 'communication devices', expo_id: Expo.first.id + 4)
 
 Exhibitor.create!(name: 'Toshiba', icon: 'https://www.cpro.fr/wp-content/uploads/2018/07/Toshiba-logo.png', location: 'Hall 17 / 104',
   description: 'Toshiba Electronics Europe GmbH (TEE) is the European electronic components business of Toshiba Electronic Devices and Storage Corporation. TEE offers European consumers and businesses a wide variety of innovative hard disk drive (HDD) products plus semiconductor solutions for automotive, industrial, IoT, motion control, telecoms, networking, consumer and white goods applications. ',
-  product_category: 'Home Entertainment & VR', expo_id: 1)
+  product_category: 'Home Entertainment & VR', expo_id: Expo.first.id)
 
 Exhibitor.create!(name: 'Toshiba', icon: 'https://www.cpro.fr/wp-content/uploads/2018/07/Toshiba-logo.png', location: 'Hall 17 / 104',
   description: 'Toshiba Electronics Europe GmbH (TEE) is the European electronic components business of Toshiba Electronic Devices and Storage Corporation. TEE offers European consumers and businesses a wide variety of innovative hard disk drive (HDD) products plus semiconductor solutions for automotive, industrial, IoT, motion control, telecoms, networking, consumer and white goods applications. ',
-  product_category: 'Home Entertainment & VR', expo_id: 2)
+  product_category: 'Home Entertainment & VR', expo_id: Expo.first.id + 1)
 
 Exhibitor.create!(name: 'Toshiba', icon: 'https://www.cpro.fr/wp-content/uploads/2018/07/Toshiba-logo.png', location: 'Hall 17 / 104',
   description: 'Toshiba Electronics Europe GmbH (TEE) is the European electronic components business of Toshiba Electronic Devices and Storage Corporation. TEE offers European consumers and businesses a wide variety of innovative hard disk drive (HDD) products plus semiconductor solutions for automotive, industrial, IoT, motion control, telecoms, networking, consumer and white goods applications. ',
-  product_category: 'Home Entertainment & VR', expo_id: 3)
+  product_category: 'Home Entertainment & VR', expo_id: Expo.first.id + 2)
 
 Exhibitor.create!(name: 'Toshiba', icon: 'https://www.cpro.fr/wp-content/uploads/2018/07/Toshiba-logo.png', location: 'Hall 17 / 104',
   description: 'Toshiba Electronics Europe GmbH (TEE) is the European electronic components business of Toshiba Electronic Devices and Storage Corporation. TEE offers European consumers and businesses a wide variety of innovative hard disk drive (HDD) products plus semiconductor solutions for automotive, industrial, IoT, motion control, telecoms, networking, consumer and white goods applications. ',
-  product_category: 'Home Entertainment & VR', expo_id: 4)
+  product_category: 'Home Entertainment & VR', expo_id: Expo.first.id + 3)
 
 Exhibitor.create!(name: 'Toshiba', icon: 'https://www.cpro.fr/wp-content/uploads/2018/07/Toshiba-logo.png', location: 'Hall 17 / 104',
   description: 'Toshiba Electronics Europe GmbH (TEE) is the European electronic components business of Toshiba Electronic Devices and Storage Corporation. TEE offers European consumers and businesses a wide variety of innovative hard disk drive (HDD) products plus semiconductor solutions for automotive, industrial, IoT, motion control, telecoms, networking, consumer and white goods applications. ',
-  product_category: 'Home Entertainment & VR', expo_id: 5)
+  product_category: 'Home Entertainment & VR', expo_id: Expo.first.id + 4)
 
 puts 'Done !'
