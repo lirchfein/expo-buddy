@@ -4,5 +4,8 @@
   "dependencies": {
     "@rails/webpacker": "3.5",
     "ngrok": "^3.1.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
   }
 }
