@@ -1,13 +1,15 @@
 <div class="card" style="background-image: url('<%= cl_image_path(expo.cover_pic) %>');">
   <div class="card-content">
-    <div class="card-text">
-      <% expo.start_date.month == expo.start_date.month ? start_d = expo.start_date.day.to_s + '.' : start_d = expo.start_date.strftime('%d. %b')%>
-      <p><%= start_d %> - <%= expo.end_date.strftime('%d. %b %Y') %></p>
-      <h1><%= expo.name %></h1>
-    </div>
-    <div class="card-text small-margin-top">
-      <p><%= expo.exhibitors_num %> exhibitors | <%= expo.visitors_num %> visitors | <%= expo.square_meters %> m2</p>
-    </div>
+    <%= link_to expo, class:'card-link' do %>
+      <div class="card-text">
+        <% expo.start_date.month == expo.start_date.month ? start_d = expo.start_date.day.to_s + '.' : start_d = expo.start_date.strftime('%d. %b')%>
+        <p><%= start_d %> - <%= expo.end_date.strftime('%d. %b %Y') %></p>
+        <h1><%= expo.name %></h1>
+      </div>
+      <div class="card-text small-margin-top">
+        <p><%= expo.exhibitors_num %> exhibitors | <%= expo.visitors_num %> visitors | <%= expo.square_meters %> m2</p>
+      </div>
+    <% end %>
   </div>
  <div class="bookmark-container bookmark-card">
   <%= render 'components/bookmark', expo: expo %>
