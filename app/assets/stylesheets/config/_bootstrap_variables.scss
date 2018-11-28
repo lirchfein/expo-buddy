@@ -16,7 +16,7 @@
 .form-control.is-invalid,
 .was-validated .custom-select:invalid,
 .custom-select.is-invalid {
-  border-color: $red;s
+  border-color: $red;
 }
 
 .was-validated .form-control:invalid ~ .invalid-feedback,
