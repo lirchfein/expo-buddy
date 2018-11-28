@@ -7,5 +7,9 @@ class ExhibitorsController < ApplicationController
 
   def show
     @exhibitor = Exhibitor.find(params[:id])
+    @expo = Expo.find(params[:expo_id])
+  end
+
+  def notes
   end
 end
