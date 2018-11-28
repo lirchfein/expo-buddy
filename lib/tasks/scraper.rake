@@ -18,12 +18,10 @@ namespace :scraper do
           else
             icon = icon_url
           end
-          p icon
           hall = element.search('.ngn-hallname').text.strip
           stand = element.search('.ngn-stand').text.strip # We could set location to hall + stand
           location = "#{hall} #{stand}"
           description = element.search('.ngn-description').text.strip
-          p 'creating exhibitor'
           exhib = Exhibitor.create!(name: name, icon: icon, hall: hall, stand: stand, location: location, description: description, expo: e)
           puts "Just created Exhibitor #{exhib.name}"
         end
