@@ -6,7 +6,7 @@
 //
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
-
+import "bootstrap";
 console.log('Hello World from Webpacker')
 import { addEventListenersToExpoTabs } from '../components/expo-tabs.js';
 addEventListenersToExpoTabs()

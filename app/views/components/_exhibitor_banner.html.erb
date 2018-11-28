@@ -1,7 +1,9 @@
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category">Popular</div>
-  <div class="card-description">
-    <img class="card-user" src=<%= @exhibitor.icon %>>
-    <%= exhibitor.name %>
+<div class="expo-header" style="background-image: linear-gradient(-225deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.4) 50%),url('<%= cl_image_path @expo.cover_pic %>')">
+
+  <%= render 'components/expo_navbar' %>
+
+  <div class ='exhibitor-container'>
+    <img class="icon-square" src=<%= @exhibitor.icon %> >
+    <h1> <%= @exhibitor.name %> </h1>
   </div>
 </div>

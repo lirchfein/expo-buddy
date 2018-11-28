@@ -19,13 +19,21 @@
   padding: 5px 17px;
   display: inline-block;;
   h1 {
-    font-size: 5em;
     margin: 0;
   }
   p {
-    font-size: 2em;
     margin: 0;
   }
+}
+
+.bookmark-card {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.bm-card-size {
+  width: 70px;
 }
 
 .small-margin-top {
