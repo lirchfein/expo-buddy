@@ -1,12 +1,17 @@
-.other-page-content {
+
+.exhibitor-item-render {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: white;
 }
 
+.toggle-visibility {
+  display: none;
+}
 .exhibitor-list-item {
   justify-content: center;
   display: flex;
@@ -16,6 +21,13 @@
   text-align: center;
   border-bottom: solid 1px;
   border-color: rgba(0, 0, 0, 0.5);
+  a{
+    i{
+      color: $primary-dark;
+      opacity: 0.6;
+    }
+
+  }
 }
 
 .exhibitor-icon {
@@ -25,8 +37,8 @@
   background-size: contain !important;
   background-repeat: no-repeat !important;
   border-radius: 5px;
-  border: solid 2px;
-  border-color: rgba(0, 0, 0, 0.5);
+  border: solid 0.5px;
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .exhibitor-item {
@@ -42,4 +54,10 @@
 .exhibitor-info {
   display: flex;
   flex-direction: column;
+  h2{
+    margin: 0;
+  }
+  p{
+    margin: 0;
+  }
 }

@@ -3,13 +3,14 @@
   <div class="exhibitor-icon" style="background: url('<%= cl_image_path exhibitor.icon %>'); ">
   </div>
   <div class="exhibitor-item">
-
     <div class="exhibitor-info">
-      <h1><%= exhibitor.name %></h1>
+      <h2><%= exhibitor.name %></h2>
       <p><%= exhibitor.location %></p>
     </div>
 
   </div>
-      <i class="fas fa-star" style= 'font-size: 300%;'></i>
+    <div class="favorite-cont">
+      <%= render 'components/favorite', expo: @expo, exhibitor: exhibitor %>
+    </div>
 
 </div>

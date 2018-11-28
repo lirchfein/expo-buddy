@@ -1,0 +1,7 @@
+function reRenderStar() {
+  let favorite_containers = document.getElementById('<%= @exhibitor.id %>');
+  const html = '<%= j render "components/favorite", expo: @expo, exhibitor: @exhibitor %>'
+  favorite_containers.innerHTML = html
+}
+
+reRenderStar()
