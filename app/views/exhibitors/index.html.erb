@@ -9,8 +9,8 @@
     </div>
 
   <div class="exhibitor-item-render favorite-list toggle-visibility">
-    <% @expo.exhibitors.each do |exhibitor| %>
-      <%= render 'components/exhibitor_favorite_list', exhibitor: exhibitor %>
+    <% current_user.favorites.each do |favorite| %>
+      <%= render 'components/exhibitor_favorite_list', exhibitor: favorite.exhibitor %>
     <% end %>
   </div>
 </div>
