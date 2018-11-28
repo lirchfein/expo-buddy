@@ -1,5 +1,5 @@
 <div class="expo-header" style="background-image: url('<%= cl_image_path expo.cover_pic %>')">
-  <%= render 'components/expo_navbar' %>
+  <%= render 'components/expo_navbar', expo: expo %>
   <div class="exhibitor-header-white-box">
     <p><%= expo.start_date %> | <%= expo.end_date %></p>
     <h1> <%= expo.name %> </h1>

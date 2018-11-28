@@ -1,33 +1,63 @@
-.other-page-content {
+
+.exhibitor-item-render {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: white;
 }
 
+.toggle-visibility {
+  display: none;
+}
 .exhibitor-list-item {
   justify-content: center;
   display: flex;
-  height: 10vh;
+  height: 10.5vh;
   width: 80%;
   align-items: center;
   text-align: center;
+  border-bottom: solid 1px;
+  border-color: rgba(0, 0, 0, 0.5);
+  a{
+    i{
+      color: $primary-dark;
+      opacity: 0.6;
+    }
+
+  }
 }
 
 .exhibitor-icon {
-  height: 80%;
-  flex-grow: 1;
-  background-size: cover;
+  height: 65%;
+  flex: 0 0 19%;
+  background-position: center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  border-radius: 5px;
+  border: solid 0.5px;
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .exhibitor-item {
+  flex: 0 0 60%;
   display: flex;
+  justify-content: left;
   flex-grow: 2;
+  align-items: center;
+  text-align: left;
+  margin-left: 5%;
 }
 
 .exhibitor-info {
   display: flex;
   flex-direction: column;
+  h2{
+    margin: 0;
+  }
+  p{
+    margin: 0;
+  }
 }

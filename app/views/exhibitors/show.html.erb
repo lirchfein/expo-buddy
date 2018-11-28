@@ -8,10 +8,22 @@
 </div>
 
 <div class="exhibitor-notes" style="display: block">
-  <p>div 2 else diplsay none</p>
+  <div class="col-xs-4 small-padding">
+    <div class="add-picture square">
+      <img id="add-icon" src="<%= cl_image_path 'noun_Plus_341859.png'%>">
+    </div>
+  </div>
+    <% @pictures.each do |picture|%>
+      <div class="col-xs-4 small-padding">
+          <div class="pic-display square" style="background-image: url('<%= cl_image_path picture.pic %>')">
+          </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 
   <%= render 'components/exhibitor_tabs' %>
 
 </div>
+<!-- style ="background: url(<%= cl_image_path 'noun_Plus_341859.png'%> -->
