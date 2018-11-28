@@ -1,10 +1,12 @@
 <div class="navbar">
   <div class="navbar-icons">
-    <p>Hello</p>
+    <p>Burger</p>
   </div>
   <div id="empty-div"></div>
   <div class="navbar-icons">
-    <i class="fas fa-star"></i><p>Hello again</p>
+    <div class="bookmark-container icon-shadow">
+      <%= render 'components/bookmark', expo: expo %>
+    </div>
   </div>
 
 </div>
