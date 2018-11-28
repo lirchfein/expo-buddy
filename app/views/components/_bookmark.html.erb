@@ -1,4 +1,4 @@
-<%= link_to bookmark_path(expo), remote: true do %>
+<%= link_to bookmark_path(expo), {id: expo.id}, remote: true do %>
   <% if current_user %>
     <% bookmark = current_user.bookmarks.find_by(expo_id: expo.id) %>
     <% if bookmark%>
