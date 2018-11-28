@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
         request.fullpath != "/users/sign_out" &&
         !request.xhr?) # don't store ajax calls
       session["user_return_to"] = request.fullpath
+      session[:return_to] ||= request.referer
     end
   end
 end
