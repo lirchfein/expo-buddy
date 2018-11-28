@@ -1,5 +1,6 @@
 .navbar {
   height: 7vh;
+  padding-top: 16px;
   color: white;
   display: flex;
   align-items: center;
@@ -11,12 +12,14 @@
 }
 
 .navbar-icons {
-  padding: 20px;
+  padding: 16px;
   display: flex;
   justify-content: space-around;
 
   i {
     padding: 5px;
+    font-size: 28px;
   }
 }
+
 
