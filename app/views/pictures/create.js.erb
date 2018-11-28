@@ -1,0 +1,6 @@
+// HTML = '<%= cl_image_tag(Picture.all.last.pic, :width=>250, :height=>250, :gravity=>"east", :crop=>"fill") %>';
+// const picsDiv = document.getElementById('ex-pics');
+// picsDiv.insertAdjacentHTML('beforeend', HTML);
+
+
+document.getElementById('ex-pics').insertAdjacentHTML('beforeend', '<%= cl_image_tag(Picture.all.last.pic, :width=>250, :height=>250, :gravity=>"east", :crop=>"fill") %>');

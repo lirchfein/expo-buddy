@@ -30,7 +30,7 @@ Expo.create!(name: 'MWC', start_date: '25/02/2019', end_date: '28/02/2019',
   city: 'Barcelona',  address: "Av. Joan Carles I, 64, 08908 L'Hospitalet de Llobregat, Barcelona, Spain")
 
 Expo.create!(name: 'CES', start_date: '08/01/2019', end_date: '12/01/2019',
-  cover_pic: 'https://res.cloudinary.com/dfcud6por/image/upload/v1543342337/expo-buddy/ces_cover.png',
+  cover_pic: 'https://res.cloudinary.com/dfcud6por/image/upload/v1543422221/expo-buddy/ces_cover.png',
   exhibitors_num: 3910, visitors_num: 170000, square_meters: 100000,
   # description: "Owned and produced by the Consumer Technology Association (CTA), it attracts the world's business leaders and pioneering thinkers.",
   city: 'Las Vegas',  address: 'Las Vegas Convention Center 3150 Paradise Rd Las Vegas NV, 89109')

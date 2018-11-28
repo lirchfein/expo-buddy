@@ -1,2 +1,1 @@
-let bookmark_container = document.getElementById(String(<%=@expo.id%>));
-bookmark_container.inserAdjacentHTML('beforeend', '<%= j render "components/bookmark", expo: @expo %>');
+document.getElementById(String(<%=@expo.id%>)).innerHTML = ('beforeend', '<%= j render "components/bookmark", expo: @expo %>');
