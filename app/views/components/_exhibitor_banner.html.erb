@@ -3,7 +3,7 @@
   <%= render 'components/exhibitor_navbar' %>
 
   <div class ='exhibitor-container'>
-    <img class="icon-square" src=<%= @exhibitor.icon %> >
+    <div class="icon-square" style="background-image: url('<%= cl_image_path exhibitor.icon %>')"> </div>
     <h1> <%= @exhibitor.name %> </h1>
   </div>
 </div>

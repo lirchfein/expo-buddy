@@ -14,6 +14,7 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'google-webfonts', '~> 0.2.0'
 # Image uploading
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
