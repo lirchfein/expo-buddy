@@ -1,9 +1,10 @@
 <div class="expo-header" style="background-image: linear-gradient(-225deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.4) 50%),url('<%= cl_image_path @expo.cover_pic %>')">
 
-  <%= render 'components/expo_navbar' %>
+  <%= render 'components/exhibitor_navbar' %>
 
   <div class ='exhibitor-container'>
-    <img class="icon-square" src=<%= @exhibitor.icon %> >
+    <div class="icon-square" style="background-image: url('<%= cl_image_path exhibitor.icon %>')">
+    </div>
     <h1> <%= @exhibitor.name %> </h1>
   </div>
 </div>

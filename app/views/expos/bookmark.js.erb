@@ -1,2 +1,2 @@
-const bookmark_container = document.querySelectorAll('.bookmark-container');
-bookmark_container.insertAdjacentHTML('<%= j render "components/bookmark", expo: @expo %>')
+let bookmark_container = document.getElementById(String(<%=@expo.id%>));
+bookmark_container.inserAdjacentHTML('beforeend', '<%= j render "components/bookmark", expo: @expo %>');
