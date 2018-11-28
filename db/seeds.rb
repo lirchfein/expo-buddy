@@ -151,4 +151,16 @@ Exhibitor.create!(name: 'Toshiba', icon: 'https://www.cpro.fr/wp-content/uploads
   description: 'Toshiba Electronics Europe GmbH (TEE) is the European electronic components business of Toshiba Electronic Devices and Storage Corporation. TEE offers European consumers and businesses a wide variety of innovative hard disk drive (HDD) products plus semiconductor solutions for automotive, industrial, IoT, motion control, telecoms, networking, consumer and white goods applications. ',
   product_category: 'Home Entertainment & VR', expo_id: Expo.first.id + 4)
 
+
+puts "Creating pictures ..."
+
+Picture.create!(pic: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542985221/Guardians/hj5hrpmg3nl8mfxheqn5.jpg'
+  user_id: User.first.id, exhibitor_id: Exhibitor.first.id)
+
+Picture.create!(pic: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542919883/Guardians/ctk3rt27rgc5krxp0b94.jpg'
+  user_id: User.first.id, exhibitor_id: Exhibitor.first.id + 1)
+
+Picture.create!(pic: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542812370/Guardians/deadpool-1200x675.jpg'
+  user_id: User.first.id, exhibitor_id: Exhibitor.first.id + 2)
+
 puts 'Done !'
