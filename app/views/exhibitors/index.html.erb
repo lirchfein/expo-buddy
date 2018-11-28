@@ -3,6 +3,7 @@
 <div class="other-page-content">
   <% @expo.exhibitors.each do |exhibitor| %>
     <%= render 'components/exhibitor_list_item', exhibitor: exhibitor %>
+    <%= render 'components/exhibitor_favorite_list', exhibitor: exhibitor %>
   <% end %>
 </div>
 
