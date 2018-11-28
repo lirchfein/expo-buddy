@@ -47,5 +47,18 @@ Expo.create!(name: 'Computex', start_date: '28/05/2019', end_date: '01/06/2019',
   # description: 'COMPUTEX, one of the leading global ICT, IoT & Startup trade shows offering a complete ICT supply chain and IoT ecosystems, will return next year from May 28 – June 1, 2019, as a bigger and better show.',
   city: 'Taipei',  address: '5th Floor, 333 Keelung Road, Section 1 New Taipei City')
 
+
+puts "Creating pictures ..."
+
+Picture.create!(pic: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542985221/Guardians/hj5hrpmg3nl8mfxheqn5.jpg'
+  user_id: User.first.id, exhibitor_id: Exhibitor.first.id)
+
+Picture.create!(pic: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542919883/Guardians/ctk3rt27rgc5krxp0b94.jpg'
+  user_id: User.first.id, exhibitor_id: Exhibitor.first.id + 1)
+
+Picture.create!(pic: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542812370/Guardians/deadpool-1200x675.jpg'
+  user_id: User.first.id, exhibitor_id: Exhibitor.first.id + 2)
+
 puts 'Seed complete!'
 puts 'Please run the following task: <<<< rake scraper:exhibitors >>>> to create exhibitors!'
+
