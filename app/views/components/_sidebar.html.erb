@@ -1,0 +1,65 @@
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+
+        <div id="dismiss">
+            <i class="fas fa-bars"></i>
+        </div>
+
+
+        <div class="sidebar-content">
+          <div class="sidebar-header">
+              <%= cl_image_tag("bsyhp1owuoat3ybsvgdq", width: 100, height: 100, radius: "max", crop: :thumb, gravity: :face) %>
+              <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+          </div>
+          <ul class="list-unstyled components">
+
+              <h3><i class="fas fa-bookmark"></i> EXPOS</h3>
+
+              <!-- check if user has expos stored at all -->
+              <% if current_user.expos.empty? %>
+                      <h3>We need to add some explanatory text here</h3>
+              <% else %>
+
+                      <!-- get arrays of bookmarked expos fot 2018 and 2019 -->
+                      <% expos_current_year = current_user.expos.where('start_date BETWEEN ? AND ?', Date.new(2018,1,1), Date.new(2018,12,31)) %>
+                      <% expos_next_year = current_user.expos.where('start_date BETWEEN ? AND ?', Date.new(2019,1,1), Date.new(2019,12,31)) %>
+
+                      <!-- check if user has expos for 2018 -->
+                      <% if expos_current_year.length.positive? %>
+
+                        <li class="active">
+                            <h3 data-toggle="collapse" aria-expanded="false">2018</h3>
+                            <ul class="collapse list-unstyled" id="homeSubmenu">
+                              <% expos_current_year.each do |expo| %>
+                                <li>
+                                    <%= link_to expo.name, expo_exhibitors_path(expo) %>
+                                </li>
+                              <% end %>
+                            </ul>
+                        </li>
+                      <% end %>
+
+                      <!-- check if user has expos for 2019 -->
+                      <% if expos_next_year.length.positive? %>
+                            <a href="#nextYearSubmenu" data-toggle="collapse" aria-expanded="false">2019</a>
+                            <ul class="collapse list-unstyled" id="nextYearSubmenu">
+                              <% expos_next_year.each do |expo| %>
+                                <li>
+                                    <%= link_to expo.name, expo_exhibitors_path(expo) %>
+                                </li>
+                              <% end %>
+                            </ul>
+                        </li>
+                      <% end %>
+              <% end %>
+          </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="overlay"></div>
+                <div id="sidebarCollapse">
+                    <i class="fas fa-bars"></i>
+                </div>
+    <!-- Dark Overlay element -->

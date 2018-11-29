@@ -30,8 +30,12 @@
   </div>
 </div>
 
-
+s
   <%= render 'components/exhibitor_tabs' %>
 
 </div>
 <!-- style ="background: url(<%= cl_image_path 'noun_Plus_341859.png'%> -->
+
+<%= content_for :after_js do %>
+  <%= javascript_pack_tag "picture_upload" %>
+<% end %>

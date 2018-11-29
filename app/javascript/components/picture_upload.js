@@ -19,4 +19,8 @@ function addEventListenersToPhotoUploadBtn() {
   add_icon_button.addEventListener('click', clickPhotoUploadButton)
 }
 
-export {addEventListenersToPhotoForm, addEventListenersToPhotoUploadBtn};
+addEventListenersToPhotoForm();
+addEventListenersToPhotoUploadBtn();
+
+
+// export {addEventListenersToPhotoForm, addEventListenersToPhotoUploadBtn};
