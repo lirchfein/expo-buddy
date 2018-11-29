@@ -14,3 +14,4 @@ yarn-error.log
 .byebug_history
 .env*
 ngrok
+ngrok-stable-darwin-amd64.zip

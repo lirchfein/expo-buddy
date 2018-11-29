@@ -1,10 +1,10 @@
 .expo-header {
-  height: 28vh;
+  height: 230px;
   background-size: cover !important;
   position: relative;
-  position: sticky;
-  top: 0;
-  z-index: 2;
+  // position: sticky;
+  // top: 0;
+  // z-index: 2;
 }
 
 .exhibitor-header-white-box {
@@ -13,8 +13,8 @@
   display: inline-block;
   padding: 3px 11px;
   position: absolute;
-  bottom: 3vh;
-  left: 5vh;
+  bottom: 25px;
+  left: 35px;
   h1 {
     margin: 0;
   }
