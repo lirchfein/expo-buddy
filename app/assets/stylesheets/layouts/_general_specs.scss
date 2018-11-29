@@ -21,7 +21,15 @@ body {
     font-size: 14px;
   }
   .icon-shadow {
-  text-shadow: 0px 0px 4px #111111;
+    text-shadow: 0px 0px 4px #111111;
+  }
+
+  .light-paragraph {
+    font-weight: 300;
+  }
+
+  .bold-header {
+    font-weight: 700;
   }
 }
 

@@ -1,8 +1,12 @@
 class ExhibitorsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
   def index
-    @exhibitors = Exhibitor.all
     @expo = Expo.find(params[:expo_id])
+    if params[:query].present?
+      @exhibitors = @expo.exhibitors.search_by_name_and_description(params[:query])
+    else
+      @exhibitors = @expo.exhibitors
+    end
   end
 
   def show
