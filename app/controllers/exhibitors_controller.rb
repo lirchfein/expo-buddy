@@ -15,6 +15,7 @@ class ExhibitorsController < ApplicationController
     @exhibitor = Exhibitor.find(params[:id])
     @favorite = current_user.favorites.find_by(exhibitor_id: @exhibitor.id)
 
+
     if @favorite
       @favorite.destroy
     else
