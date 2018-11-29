@@ -34,3 +34,7 @@
   </div>
   <%= render 'components/exhibitor_tabs' %>
 </div>
+
+<%= content_for :after_js do %>
+  <%= javascript_pack_tag "picture_upload" %>
+<% end %>
