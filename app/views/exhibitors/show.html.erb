@@ -3,35 +3,34 @@
   <%= render 'components/exhibitor_banner', exhibitor: @exhibitor %>
 
   <div class="exhibitor-description" style="display: none">
+
     <p class="blocks"><%=  @exhibitor.location %></p>
     <p class="blocks"><%= @exhibitor.description %></p>
   </div>
 
+
   <div class="exhibitor-notes" style="display: block">
-        <div class="add-picture-form">
-          <%= simple_form_for([ @exhibitor, @picture ], remote: true) do |f| %>
-            <%= f.input :user_id, input_html: {value: "#{current_user.id}", class: "hidden"}, :label => false %>
-            <%= f.input :exhibitor_id, input_html: {value: "#{@exhibitor.id}", class: "hidden"}, :label => false %>
-            <%= f.input :pic, input_html: {class: "hidden", id: "button-photo-upload"}, :label => false %>
-            <%= f.input :pic_cache, as: :hidden %>
-            <%= f.submit "Submit", class: "hidden button-submit" %>
-          <% end %>
-        </div>
-    <div class="col-xs-4">
-      <div class="add-button-container">
-          <img id="add-icon" src="<%= cl_image_path 'noun_Plus_341859.png'%>">
+
+    <div class="add-picture-form">
+      <%= simple_form_for([ @exhibitor, @picture ], remote: true) do |f| %>
+        <%= f.input :user_id, input_html: {value: "#{current_user.id}", class: "hidden"}, :label => false %>
+        <%= f.input :exhibitor_id, input_html: {value: "#{@exhibitor.id}", class: "hidden"}, :label => false %>
+        <%= f.input :pic, input_html: {class: "hidden", id: "button-photo-upload"}, :label => false %>
+        <%= f.input :pic_cache, as: :hidden %>
+        <%= f.submit "Submit", class: "hidden button-submit" %>
+      <% end %>
+    </div>
+    <div  class="col-xs-4 small-padding">
+      <div id="add-icon" class ="icon-add">
+        <%= cl_image_tag('https://res.cloudinary.com/dfcud6por/image/upload/c_mpad,h_100,w_100/v1543412664/noun_Plus_341859.png', :width=>100, :height=>96, :crop=>"mpad") %>
       </div>
     </div>
+
     <div id="pic-div">
       <% @pictures.each do |picture|%>
         <%= render "components/thumnail_pic", pic: picture.pic %>
       <% end %>
     </div>
   </div>
-</div>
-
-
   <%= render 'components/exhibitor_tabs' %>
-
 </div>
-<!-- style ="background: url(<%= cl_image_path 'noun_Plus_341859.png'%> -->
