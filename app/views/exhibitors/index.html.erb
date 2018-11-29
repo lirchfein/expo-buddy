@@ -2,8 +2,17 @@
 <%= render 'components/expo-tabs' %>
 <div class="other-page-content">
 
-  <div class="exhibitor-item-render exhibitor-list toggle-visibility ">
-    <% @expo.exhibitors.each do |exhibitor| %>
+  <div class="exhibitor-item-render exhibitor-list toggle-visibility">
+    <div class="search light-paragraph">
+      <%= form_tag expo_exhibitors_path(@expo), method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find exhibitors", autocomplete:"off"
+        %>
+      <% end %>
+    </div>
+    <% @exhibitors.each do |exhibitor| %>
       <%= render 'components/exhibitor_list_item', exhibitor: exhibitor %>
     <% end %>
     </div>
