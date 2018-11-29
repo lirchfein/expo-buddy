@@ -2,7 +2,7 @@
 
   <%= link_to expo_exhibitor_path(exhibitor.expo, exhibitor) do %>
 
-  <div class="exhibitor-icon" style="background: url('<%= exhibitor.icon.blank? ? image_path('placeholder.jpg') : cl_image_path(exhibitor.icon) %>')">
+  <div class="exhibitor-icon" style="background: url('<%= exhibitor.icon.blank? ? cl_image_path('expo-buddy/placeholders/exhibitor-placeholder.jpg') : cl_image_path(exhibitor.icon) %>')">
   </div>
 
   <div class="exhibitor-item">
