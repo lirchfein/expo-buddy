@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   root to: 'pages#home'
-  
+
   # to be eliminated after integration in exhibitor show view:
   get 'pictures/:exhibitor_id/test_pic_upload', to: 'pictures#test_pic_upload', as: 'exhibitor_pictures'
   post 'pictures/:exhibitor_id/test_pic_upload', to: 'pictures#create'
