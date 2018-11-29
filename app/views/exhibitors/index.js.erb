@@ -1,0 +1,7 @@
+function reRenderExhibitorList() {
+  let exhibitor_list_container = document.getElementById('list-item-render');
+  const html = '<%= j render "components/exhibitor_list_item_render", exhibitors: @exhibitors %>'
+  exhibitor_list_container.innerHTML = html
+}
+
+reRenderExhibitorList()
