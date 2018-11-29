@@ -1,9 +1,22 @@
 <%= render 'components/expo_banner', expo: @expo %>
 <%= render 'components/expo-tabs' %>
 <div class="other-page-content">
-  <%# @expo.exhibitors.each do |exhibitor| %>
-    <%#= render 'components/exhibitor_list_item', exhibitor: exhibitor %>
-  <%# end %>
+
+  <div class="exhibitor-item-render exhibitor-list">
+    <% @expo.exhibitors.each do |exhibitor| %>
+      <%= render 'components/exhibitor_list_item', exhibitor: exhibitor %>
+    <% end %>
+    </div>
+
+  <div class="exhibitor-item-render favorite-list toggle-visibility">
+    <% if current_user %>
+      <% current_user.favorites.each do |favorite| %>
+        <%= render 'components/exhibitor_favorite_list', exhibitor: favorite.exhibitor %>
+      <% end %>
+    <% else %>
+      <%= render 'components/favorites_not_signed_in' %>
+    <% end %>
+  </div>
 </div>
 
 
