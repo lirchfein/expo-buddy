@@ -1,4 +1,3 @@
-const tabs = document.querySelectorAll(".expo-tab")
 
 
 function togglingVisibilityListItems(tab) {
@@ -14,9 +13,9 @@ function togglingVisibilityListItems(tab) {
 }
 
 function addEventListenersToExpoTabs() {
+  const tabs = document.querySelectorAll(".expo-tab")
   tabs.forEach( function(tab) {
     tab.addEventListener('click', function(){
-        console.log('hello')
       tabs.forEach( function(item) {
         item.classList.remove('toggle-border')
       })
