@@ -8,4 +8,15 @@ function addEventListenersToPhotoForm() {
   photo_form.addEventListener('change', clickPhotoSubmitButton)
 }
 
-export {addEventListenersToPhotoForm};
+function clickPhotoUploadButton() {
+  const form_button_photo_upload = document.getElementById("button-photo-upload")
+  //console.log(form_button_photo_upload);
+  form_button_photo_upload.click()
+}
+
+function addEventListenersToPhotoUploadBtn() {
+  const add_icon_button = document.getElementById('add-icon')
+  add_icon_button.addEventListener('click', clickPhotoUploadButton)
+}
+
+export {addEventListenersToPhotoForm, addEventListenersToPhotoUploadBtn};

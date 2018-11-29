@@ -8,23 +8,25 @@
   </div>
 
   <div class="exhibitor-notes" style="display: block">
-    <%= simple_form_for([ @exhibitor, @picture ], remote: true) do |f| %>
-      <%= f.input :user_id, input_html: {value: "#{current_user.id}", class: "hidden"} %>
-      <%= f.input :exhibitor_id, input_html: {value: "#{@exhibitor.id}", class: "hidden"} %>
-      <%= f.input :pic %>
-      <%= f.input :pic_cache, as: :hidden %>
-      <%= f.submit "Submit", class: "hidden button-submit" %>
-    <% end %>
-    <div class="col-xs-4 small-padding">
-      <div class="square add-picture">
-        <img id="add-icon" src="<%= cl_image_path 'noun_Plus_341859.png'%>">
+        <div class="add-picture-form">
+          <%= simple_form_for([ @exhibitor, @picture ], remote: true) do |f| %>
+            <%= f.input :user_id, input_html: {value: "#{current_user.id}", class: "hidden"}, :label => false %>
+            <%= f.input :exhibitor_id, input_html: {value: "#{@exhibitor.id}", class: "hidden"}, :label => false %>
+            <%= f.input :pic, input_html: {class: "hidden", id: "button-photo-upload"}, :label => false %>
+            <%= f.input :pic_cache, as: :hidden %>
+            <%= f.submit "Submit", class: "hidden button-submit" %>
+          <% end %>
+        </div>
+    <div class="col-xs-4">
+      <div class="add-button-container">
+          <img id="add-icon" src="<%= cl_image_path 'noun_Plus_341859.png'%>">
       </div>
     </div>
-      <div id="pic-div">
-        <% @pictures.each do |picture|%>
-          <%= render "components/thumnail_pic", pic: picture.pic %>
-        <% end %>
-      </div>
+    <div id="pic-div">
+      <% @pictures.each do |picture|%>
+        <%= render "components/thumnail_pic", pic: picture.pic %>
+      <% end %>
+    </div>
   </div>
 </div>
 
