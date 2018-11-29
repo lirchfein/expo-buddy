@@ -1,18 +1,21 @@
 <div class= 'exhibitor-list-item'>
 
+  <%= link_to expo_exhibitor_path(exhibitor.expo, exhibitor) do %>
+
   <div class="exhibitor-icon" style="background: url('<%= exhibitor.icon.blank? ? image_path('placeholder.jpg') : cl_image_path(exhibitor.icon) %>')">
   </div>
+
   <div class="exhibitor-item">
     <div class="exhibitor-info">
-      <h2><%= exhibitor.name %></h2>
-      <p><%= exhibitor.location %></p>
+      <h2 class="bold-header"><%= exhibitor.name %></h2>
+      <p class="light-paragraph"><%= exhibitor.location %></p>
     </div>
-
   </div>
-    <div class="favorite-cont">
-      <%= render 'components/favorite', expo: @expo, exhibitor: exhibitor %>
-    </div>
+
+  <% end %>
+
+  <div class="favorite-cont">
+    <%= render 'components/favorite', expo: @expo, exhibitor: exhibitor %>
+  </div>
 
 </div>
-
-

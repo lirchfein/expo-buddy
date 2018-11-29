@@ -1,0 +1,7 @@
+function renderFavs() {
+  let destination_container = document.querySelector('.favorite-list');
+  const html = '<%= j render "components/user_favorites_render"%>'
+  destination_container.innerHTML = html
+}
+
+renderFavs()

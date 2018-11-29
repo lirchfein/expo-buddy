@@ -1,0 +1,7 @@
+function reRenderCheck() {
+  let check_containers = document.getElementById('<%= @exhibitor.id %>a');
+  const html = '<%= j render "components/visited", favorite: @favorite, exhibitor: @exhibitor %>'
+  check_containers.innerHTML = html
+}
+
+reRenderCheck()
