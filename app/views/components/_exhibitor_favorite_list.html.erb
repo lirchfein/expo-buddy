@@ -2,7 +2,8 @@
 
   <div class="exhibitor-icon" style="background: url('<%= exhibitor.icon.blank? ? image_path('placeholder.jpg') : cl_image_path(exhibitor.icon) %>')">
   </div>
-    <div class="exhibitor-item">
+
+  <div class="exhibitor-item">
 
     <div class="exhibitor-info">
       <h2><%= exhibitor.name %></h2>
@@ -10,6 +11,6 @@
     </div>
 
   </div>
-      <i class="fas fa-check-circle" style= 'opacity: 0.8;'></i>
+  <%= render 'components/visited', favorite: current_user.favorites.find_by(exhibitor_id: exhibitor.id), exhibitor: exhibitor %>
 
 </div>

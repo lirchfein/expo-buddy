@@ -16,7 +16,6 @@ class ExhibitorsController < ApplicationController
     @exhibitor = Exhibitor.find(params[:id])
     @favorite = current_user.favorites.find_by(exhibitor_id: @exhibitor.id)
 
-
     if @favorite
       @favorite.destroy
     else
@@ -32,6 +31,24 @@ class ExhibitorsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to expo_exhibitors_path(@exhibitor.expo) }
       format.js # <-- will render `app/views/exhibitors/favorites_tab.js.erb`
+    end
+  end
+
+  def update
+    @exhibitor = Exhibitor.find(params[:id])
+    @favorite = current_user.favorites.find_by(exhibitor_id: @exhibitor.id)
+    if @favorite.visited == true
+      @favorite.visited = false
+    else
+      @favorite.visited = true
+    end
+    if @favorite.save
+      respond_to do |format|
+        format.html { redirect_to expo_exhibitors_path(@exhibitor.expo) }
+        format.js # <-- will render `app/views/exhibitors/favorite.js.erb`
+      end
+    else
+      render 'index'
     end
   end
 end
