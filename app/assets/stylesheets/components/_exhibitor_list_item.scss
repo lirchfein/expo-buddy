@@ -22,7 +22,7 @@
   display: none;
 }
 .exhibitor-list-item {
-  justify-content: center;
+  justify-content: space-between;
   display: flex;
   height: 85px;
   width: 80%;
@@ -34,7 +34,7 @@
     color: inherit;
     display: flex;
     height: 100%;
-    width: 100%;
+    width: 80%;
     align-items: center;
     &:hover{
       text-decoration: none;
