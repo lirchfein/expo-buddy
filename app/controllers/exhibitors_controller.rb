@@ -26,4 +26,11 @@ class ExhibitorsController < ApplicationController
       format.js # <-- will render `app/views/exhibitors/favorite.js.erb`
     end
   end
+
+  def favorites_tab
+    respond_to do |format|
+      format.html { redirect_to expo_exhibitors_path(@exhibitor.expo) }
+      format.js # <-- will render `app/views/exhibitors/favorites_tab.js.erb`
+    end
+  end
 end

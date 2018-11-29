@@ -1,0 +1,11 @@
+<% if current_user %>
+  <% if current_user.favorites.empty? %>
+    <%= render 'components/favorites_empty_signed_in' %>
+  <% else %>
+    <% current_user.favorites.each do |favorite| %>
+      <%= render 'components/exhibitor_favorite_list', exhibitor: favorite.exhibitor %>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= render 'components/favorites_not_signed_in' %>
+<% end %>

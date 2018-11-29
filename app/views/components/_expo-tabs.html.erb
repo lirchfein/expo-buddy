@@ -1,15 +1,15 @@
 <div class="expo-tabs">
 
-    <div class="left expo-tab">
-
-      <div class= "favorite-star">
-        <i class="fas fa-star"></i>
+    <%= link_to favorites_tab_path, remote: true do%>
+      <div class="left expo-tab">
+        <div class= "favorite-star">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class= "tab-title">
+          <p>FAVORITES</p>
+        </div>
       </div>
-      <div class= "tab-title">
-        <p>FAVORITES</p>
-      </div>
-
-    </div>
+    <% end %>
 
     <div class="right expo-tab toggle-border">
 

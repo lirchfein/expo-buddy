@@ -9,13 +9,7 @@
     </div>
 
   <div class="exhibitor-item-render favorite-list toggle-visibility">
-    <% if current_user %>
-      <% current_user.favorites.each do |favorite| %>
-        <%= render 'components/exhibitor_favorite_list', exhibitor: favorite.exhibitor %>
-      <% end %>
-    <% else %>
-      <%= render 'components/favorites_not_signed_in' %>
-    <% end %>
+    <%= render 'components/user_favorites_render' %>
   </div>
 </div>
 

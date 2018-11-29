@@ -10,10 +10,8 @@
   z-index: 2;
   background-color: white;
   a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    width: 50%;
+    height: 100%;
     margin: 0;
     color: $primary-dark;
     &:hover{
