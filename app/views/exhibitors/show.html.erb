@@ -2,23 +2,29 @@
 
   <%= render 'components/exhibitor_banner', exhibitor: @exhibitor %>
 
-<div class="exhibitor-description" style="display: none">
-  <p class="blocks"><%=  @exhibitor.location %></p>
-  <p class="blocks"><%= @exhibitor.description %></p>
-</div>
-
-<div class="exhibitor-notes" style="display: block">
-  <div class="col-xs-4 small-padding">
-    <div class="add-picture square">
-      <img id="add-icon" src="<%= cl_image_path 'noun_Plus_341859.png'%>">
-    </div>
+  <div class="exhibitor-description" style="display: none">
+    <p class="blocks"><%=  @exhibitor.location %></p>
+    <p class="blocks"><%= @exhibitor.description %></p>
   </div>
-    <% @pictures.each do |picture|%>
-      <div class="col-xs-4 small-padding">
-          <div class="pic-display square" style="background-image: url('<%= cl_image_path picture.pic %>')">
-          </div>
-      </div>
+
+  <div class="exhibitor-notes" style="display: block">
+    <%= simple_form_for([ @exhibitor, @picture ], remote: true) do |f| %>
+      <%= f.input :user_id, input_html: {value: "#{current_user.id}", class: "hidden"} %>
+      <%= f.input :exhibitor_id, input_html: {value: "#{@exhibitor.id}", class: "hidden"} %>
+      <%= f.input :pic %>
+      <%= f.input :pic_cache, as: :hidden %>
+      <%= f.submit "Submit", class: "hidden button-submit" %>
     <% end %>
+    <div class="col-xs-4 small-padding">
+      <div class="square add-picture">
+        <img id="add-icon" src="<%= cl_image_path 'noun_Plus_341859.png'%>">
+      </div>
+    </div>
+      <div id="pic-div">
+        <% @pictures.each do |picture|%>
+          <%= render "components/thumnail_pic", pic: picture.pic %>
+        <% end %>
+      </div>
   </div>
 </div>
 

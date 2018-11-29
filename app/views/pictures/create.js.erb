@@ -1,6 +1,7 @@
-// HTML = '<%= cl_image_tag(Picture.all.last.pic, :width=>250, :height=>250, :gravity=>"east", :crop=>"fill") %>';
-// const picsDiv = document.getElementById('ex-pics');
-// picsDiv.insertAdjacentHTML('beforeend', HTML);
+function addPicture() {
+  HTML = '<%= j render "components/thumnail_pic", pic: Picture.all.last.pic %>'
+  const picsDiv = document.getElementById('pic-div');
+  picsDiv.insertAdjacentHTML('afterbegin', HTML);
+}
 
-
-document.getElementById('ex-pics').insertAdjacentHTML('beforeend', '<%= cl_image_tag(Picture.all.last.pic, :width=>250, :height=>250, :gravity=>"east", :crop=>"fill") %>');
+addPicture()
