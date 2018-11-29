@@ -2,13 +2,13 @@
 <%= render 'components/expo-tabs' %>
 <div class="other-page-content">
 
-  <div class="exhibitor-item-render exhibitor-list">
+  <div class="exhibitor-item-render exhibitor-list toggle-visibility ">
     <% @expo.exhibitors.each do |exhibitor| %>
       <%= render 'components/exhibitor_list_item', exhibitor: exhibitor %>
     <% end %>
     </div>
 
-  <div class="exhibitor-item-render favorite-list toggle-visibility">
+  <div class="exhibitor-item-render favorite-list ">
     <%= render 'components/user_favorites_render' %>
   </div>
 </div>

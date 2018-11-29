@@ -18,3 +18,15 @@
     margin: 0;
   }
 }
+
+.favorites_tab_error {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  opacity: 0.21;
+  height: 66vh;
+  width: 80%;
+  div{
+    text-align: inherit;
+  }
+}
