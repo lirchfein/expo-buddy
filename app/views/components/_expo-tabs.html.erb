@@ -1,17 +1,17 @@
 <div class="expo-tabs">
 
-    <div class="left expo-tab">
-
-      <div class= "favorite-star">
-        <i class="fas fa-star"></i>
+    <%= link_to favorites_tab_path, remote: true do%>
+      <div class="left expo-tab toggle-border">
+        <div class= "favorite-star">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class= "tab-title">
+          <p>FAVORITES</p>
+        </div>
       </div>
-      <div class= "tab-title">
-        <p>FAVORITES</p>
-      </div>
+    <% end %>
 
-    </div>
-
-    <div class="right expo-tab toggle-border">
+    <div class="right expo-tab ">
 
       <div class="exhibitor-mag-glass">
         <i class="fas fa-search"></i>
