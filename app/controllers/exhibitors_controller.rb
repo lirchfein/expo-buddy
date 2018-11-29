@@ -7,6 +7,10 @@ class ExhibitorsController < ApplicationController
     else
       @exhibitors = @expo.exhibitors
     end
+    respond_to do |format|
+      format.html # index.html.erb
+      format.js # <-- will render `app/views/exhibitors/index.js.erb`
+    end
   end
 
   def show
