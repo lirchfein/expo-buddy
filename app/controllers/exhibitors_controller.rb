@@ -8,6 +8,7 @@ class ExhibitorsController < ApplicationController
   def show
     @exhibitor = Exhibitor.find(params[:id])
     @expo = Expo.find(params[:expo_id])
+    @picture = Picture.new
     @pictures = Picture.all
   end
 

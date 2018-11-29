@@ -9,25 +9,30 @@
 .exhibitor-notes{
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.add-picture {
+.add-picture-form {
+// border: 2px solid #979797;
+// box-sizing: border-box;
+// box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.47);
+// border-radius: 2px;
+// position: relative;
 
-border: 2px solid #979797;
-box-sizing: border-box;
-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.47);
-border-radius: 2px;
-position: relative;
+//   #add-icon {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     margin-right: -50%;
+//     transform: translate(-50%, -50%)
+//   }
+}
 
-  #add-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-  }
+.add-button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
 }
 
 .square:before{
@@ -41,11 +46,12 @@ position: relative;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   padding-left: -15px;
+  border-radius: 2px;
 }
 
 .small-padding {
   padding-left: 5px;
   padding-right: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
