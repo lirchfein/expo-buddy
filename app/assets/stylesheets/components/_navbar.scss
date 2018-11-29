@@ -1,5 +1,5 @@
 .navbar {
-  height: 7vh;
+  height: 45px;
   padding-top: 16px;
   color: white;
   display: flex;
@@ -19,6 +19,7 @@
   i {
     padding: 5px;
     font-size: 28px;
+    color: $primary-dark;
   }
 }
 

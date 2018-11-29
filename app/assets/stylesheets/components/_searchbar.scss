@@ -2,6 +2,10 @@
   padding-top: 15px;
   display: flex;
   width: 80%;
+  position: sticky;
+  top: 50px;
+  background-color: white;
+  z-index: 3;
 }
 
 .search > form {
