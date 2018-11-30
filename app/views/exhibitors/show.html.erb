@@ -2,17 +2,23 @@
 
   <%= render 'components/exhibitor_banner', exhibitor: @exhibitor %>
 
-  <div class="exhibitor-description" style="display: none">
+  <div class="exhibitor-description">
 
     <p class="blocks"><%=  @exhibitor.location %></p>
     <p class="blocks"><%= @exhibitor.description %></p>
   </div>
 
 
-  <div class="exhibitor-notes" style="display: block">
+  <div class="exhibitor-notes no-show">
 
-  <% if current_user.id.nil? %>
-  <p>test</p>
+  <% if current_user.nil? %>
+    <div class= 'test'>
+      <div class="exhibitor-item" style="margin-right: 5%;">
+        <div class="exhibitor-info">
+          <h2>Please Sign in to add to see your Pictures !</h2>
+        </div>
+      </div>
+    </div>
   <% else %>
     <div class="add-picture-form">
       <%= simple_form_for([ @exhibitor, @picture ], remote: true) do |f| %>
