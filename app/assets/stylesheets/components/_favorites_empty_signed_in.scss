@@ -1,6 +1,6 @@
 .no-favorites {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
@@ -11,6 +11,7 @@
 
 .destination-tab-div {
   display: flex;
+  margin: 0 10px;
   justify-content: center;
   align-items: center;
   text-align: center;
