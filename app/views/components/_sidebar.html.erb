@@ -22,43 +22,47 @@
                             <h3>We need to add some explanatory text here</h3>
                     <% else %>
 
-                            <div>
-                              <!-- get arrays of bookmarked expos fot 2018 and 2019 -->
-                              <% expos_current_year = current_user.expos.where('start_date BETWEEN ? AND ?', Date.new(2018,1,1), Date.new(2018,12,31)) %>
-                              <% expos_next_year = current_user.expos.where('start_date BETWEEN ? AND ?', Date.new(2019,1,1), Date.new(2019,12,31)) %>
+                            <div class="nav-content-flex">
+                              <div>
+                                <!-- get arrays of bookmarked expos fot 2018 and 2019 -->
+                                <% expos_current_year = current_user.expos.where('start_date BETWEEN ? AND ?', Date.new(2018,1,1), Date.new(2018,12,31)) %>
+                                <% expos_next_year = current_user.expos.where('start_date BETWEEN ? AND ?', Date.new(2019,1,1), Date.new(2019,12,31)) %>
 
-                              <!-- check if user has expos for 2018 -->
-                              <% if expos_current_year.length.positive? %>
+                                <!-- check if user has expos for 2018 -->
+                                <% if expos_current_year.length.positive? %>
 
-                                <li class="active">
-                                    <h3 data-toggle="collapse" aria-expanded="true">2018</h3>
-                                    <ul class="collapse in list-unstyled" id="homeSubmenu">
-                                      <% expos_current_year.each do |expo| %>
-                                        <li>
-                                            <%= link_to expo.name, expo_exhibitors_path(expo) %>
-                                        </li>
-                                      <% end %>
-                                    </ul>
-                                </li>
-                              <% end %>
+                                  <li class="active">
+                                      <h3 data-toggle="collapse" aria-expanded="true">2018</h3>
+                                      <ul class="collapse in list-unstyled" id="homeSubmenu">
+                                        <% expos_current_year.each do |expo| %>
+                                          <li>
+                                              <%= link_to expo.name, expo_exhibitors_path(expo) %>
+                                          </li>
+                                        <% end %>
+                                      </ul>
+                                  </li>
+                                <% end %>
 
-                              <!-- check if user has expos for 2019 -->
-                              <% if expos_next_year.length.positive? %>
-                                    <a href="#nextYearSubmenu" data-toggle="collapse" aria-expanded="true">2019</a>
-                                    <ul class="collapse in list-unstyled" id="nextYearSubmenu">
-                                      <% expos_next_year.each do |expo| %>
-                                        <li>
-                                            <%= link_to expo.name, expo_exhibitors_path(expo) %>
-                                        </li>
-                                      <% end %>
-                                    </ul>
-                                </li>
-                              <% end %>
-                            </div>
-                            <div>
-                              <%= link_to(destroy_user_session_path, method: 'delete') do %>
-                                <h3>LOG OUT <i class="fas fa-sign-out-alt"></i></h3>
-                              <% end %>
+                                <!-- check if user has expos for 2019 -->
+                                <% if expos_next_year.length.positive? %>
+                                      <h3>
+                                        <a href="#nextYearSubmenu" data-toggle="collapse" aria-expanded="true">2019</a>
+                                      </h3>
+                                      <ul class="collapse in list-unstyled" id="nextYearSubmenu">
+                                        <% expos_next_year.each do |expo| %>
+                                          <li>
+                                              <%= link_to expo.name, expo_exhibitors_path(expo) %>
+                                          </li>
+                                        <% end %>
+                                      </ul>
+                                  </li>
+                                <% end %>
+                              </div>
+                              <div id="log-out-div">
+                                <%= link_to(destroy_user_session_path, method: 'delete') do %>
+                                  <h3>LOG OUT <i class="fas fa-sign-out-alt"></i></h3>
+                                <% end %>
+                              </div>
                             </div>
                     <% end %>
                 </ul>
