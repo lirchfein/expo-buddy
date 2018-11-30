@@ -1,14 +1,18 @@
-<%= link_to favorite_path(exhibitor), id: exhibitor.id, remote: true do %>
-  <% if current_user %>
-    <% favorite = current_user.favorites.find_by(exhibitor_id: exhibitor.id) %>
-    <% if favorite%>
-      <i class="fas fa-star"></i>
+<% if current_user %>
+  <%= link_to favorite_path(exhibitor), id: exhibitor.id, remote: true do %>
+    <% if current_user %>
+      <% favorite = current_user.favorites.find_by(exhibitor_id: exhibitor.id) %>
+      <% if favorite%>
+        <i class="fas fa-star"></i>
+      <% else %>
+       <i class="far fa-star"></i>
+      <% end %>
     <% else %>
-     <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
     <% end %>
-  <% else %>
+  <% end %>
+<% else %>
+  <%= link_to new_user_session_path do %>
     <i class="far fa-star"></i>
   <% end %>
 <% end %>
-
-
