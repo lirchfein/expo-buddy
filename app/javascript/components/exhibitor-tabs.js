@@ -15,9 +15,9 @@ function addEventListenersToExhibitorTabs() {
   tabs.forEach( function(tab) {
     tab.addEventListener('click', function(){
       tabs.forEach( function(item) {
-        item.classList.remove('toggle-border')
+        item.classList.remove('exhibitor-select')
       })
-      tab.classList.add('toggle-border')
+      tab.classList.add('exhibitor-select')
       togglingVisibilityListItems(tab)
     })
   })
