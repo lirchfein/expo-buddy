@@ -17,7 +17,7 @@ class ExhibitorsController < ApplicationController
     @exhibitor = Exhibitor.find(params[:id])
     @expo = Expo.find(params[:expo_id])
     @picture = Picture.new
-    @pictures = Picture.all
+    @pictures = user_pictures.reverse!
   end
 
   def favorite
@@ -34,6 +34,21 @@ class ExhibitorsController < ApplicationController
       format.js # <-- will render `app/views/exhibitors/favorite.js.erb`
     end
   end
+
+  private
+
+  def user_pictures
+    all_pictures = Picture.all
+    user = current_user.id
+    pictures_array = []
+
+    all_pictures.each do |picture|
+      if picture.user_id == user && picture.exhibitor_id == @exhibitor.id
+        pictures_array << picture
+      end
+    end
+    pictures_array.sort_by {:id}
+    return pictures_array
 
   def favorites_tab
     respond_to do |format|
