@@ -49,6 +49,7 @@ class ExhibitorsController < ApplicationController
     end
     pictures_array.sort_by {:id}
     return pictures_array
+  end
 
   def favorites_tab
     respond_to do |format|
