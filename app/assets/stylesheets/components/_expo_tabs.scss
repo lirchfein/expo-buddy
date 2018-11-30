@@ -29,7 +29,7 @@
   text-align: center;
   z-index: 2;
   background-color: white;
-  a{
+  i{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,6 +80,10 @@
 .toggle-border {
   opacity: 0.8;
   box-shadow: 0 2px  rgba(0,0,0,0.8);
+}
+
+.exhibitor-select {
+  opacity: 1;
 }
 
 .favorite-star {
