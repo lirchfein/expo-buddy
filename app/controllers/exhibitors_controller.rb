@@ -3,9 +3,9 @@ class ExhibitorsController < ApplicationController
   def index
     @expo = Expo.find(params[:expo_id])
     if params[:query].present?
-      @exhibitors = @expo.exhibitors.search_by_name_and_description(params[:query])
+      @exhibitors = @expo.exhibitors.order_by_name.search_by_name_and_description(params[:query])
     else
-      @exhibitors = @expo.exhibitors
+      @exhibitors = @expo.exhibitors.order_by_name
     end
     respond_to do |format|
       format.html # index.html.erb
