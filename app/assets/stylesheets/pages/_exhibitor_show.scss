@@ -1,5 +1,10 @@
 .page {
   height: 100%;
+  padding-bottom: 50px;
+}
+
+.no-show {
+  display: none;
 }
 
 .blocks {
@@ -63,5 +68,18 @@
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.47);
   border-radius: 2px;
   text-align: center;
+}
+
+
+.test {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  opacity: 0.21;
+  height: 66vh;
+  width: 100%;
+  div{
+    text-align: inherit;
+  }
 }
 

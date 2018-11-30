@@ -11,4 +11,7 @@ import "bootstrap";
 import { addEventListenersToExpoTabs } from '../components/expo-tabs.js';
 addEventListenersToExpoTabs();
 
+import { addEventListenersToExhibitorTabs } from '../components/exhibitor-tabs.js';
+addEventListenersToExhibitorTabs();
+
 import '../components/sidebar'
