@@ -22,5 +22,3 @@ function addEventListenersToPhotoUploadBtn() {
 addEventListenersToPhotoForm();
 addEventListenersToPhotoUploadBtn();
 
-
-// export {addEventListenersToPhotoForm, addEventListenersToPhotoUploadBtn};
