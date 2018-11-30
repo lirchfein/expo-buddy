@@ -3,7 +3,7 @@
   <%= render 'components/exhibitor_navbar' %>
 
   <div class ='exhibitor-container'>
-    <div class="icon-square" style="background-image: url('<%= cl_image_path exhibitor.icon %>')">
+    <div class="icon-square" style="background-image: url('<%= exhibitor.icon.blank? ? cl_image_path('expo-buddy/placeholders/exhibitor-placeholder.jpg') : cl_image_path(exhibitor.icon) %>')">
     </div>
     <h1> <%= @exhibitor.name %> </h1>
   </div>
