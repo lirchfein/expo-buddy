@@ -64,7 +64,7 @@ class ExhibitorsController < ApplicationController
 
   def user_pictures
     all_pictures = Picture.all
-    user = current_user.id
+    user = current_user.id if current_user != nil
     pictures_array = []
 
     all_pictures.each do |picture|
