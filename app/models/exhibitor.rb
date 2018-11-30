@@ -4,6 +4,8 @@ class Exhibitor < ApplicationRecord
   has_many :pictures, dependent: :destroy
   has_many :users, through: :favorites
 
+  scope :order_by_name, -> { order('LOWER(name) ASC') }
+
   include PgSearch
   pg_search_scope :search_by_name_and_description, against: {
     :name => 'A',

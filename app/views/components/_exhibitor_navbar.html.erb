@@ -1,11 +1,17 @@
 <div class="navbar">
   <div class="navbar-icons">
+    <%= link_to expo_exhibitors_path(@expo) do %>
     <i class="fas fa-arrow-left"></i>
+    <% end %>
   </div>
   <div id="empty-div"></div>
   <div class="navbar-icons">
-    <i class="fas fa-star"></i>
-    <i class="far fa-check-circle"></i>
+    <div class="favorite-cont">
+    <%= render 'components/favorite', expo: @expo, exhibitor: @exhibitor %>
+    </div>
+    <div class="favorite-cont">
+    <%= render 'components/visited', favorite: current_user.favorites.find_by(exhibitor_id: @exhibitor.id), exhibitor: @exhibitor %>
+  </div>
   </div>
 
 </div>
