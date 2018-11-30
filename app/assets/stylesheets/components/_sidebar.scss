@@ -3,6 +3,7 @@
 }
 
 #sidebar {
+    margin-left: -250px;
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
@@ -20,7 +21,7 @@
 }
 
 #sidebar.active {
-    margin-left: -250px;
+    margin-left: 0px;
 }
 
 a[data-toggle="collapse"] {
@@ -42,6 +43,10 @@ a[data-toggle="collapse"] {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
+}
+
+#blue-burger {
+  color: $primary-dark;
 }
 
 
@@ -66,9 +71,13 @@ a[data-toggle="collapse"] {
 }
 
 #dismiss, #sidebarCollapse {
-    padding: 16px;
     display: inline-block;
-    i {
+    cursor: pointer;
+}
+
+#dismiss {
+    padding: 16px;
+      i {
       padding: 5px;
     }
 }
