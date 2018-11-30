@@ -11,6 +11,9 @@
 
   <div class="exhibitor-notes" style="display: block">
 
+  <% if current_user.id.nil? %>
+  <p>test</p>
+  <% else %>
     <div class="add-picture-form">
       <%= simple_form_for([ @exhibitor, @picture ], remote: true) do |f| %>
         <%= f.input :user_id, input_html: {value: "#{current_user.id}", class: "hidden"}, :label => false %>
@@ -32,6 +35,7 @@
       <% end %>
     </div>
   </div>
+  <% end %>
   <%= render 'components/exhibitor_tabs' %>
 </div>
 
