@@ -1,0 +1,32 @@
+.search {
+  padding-top: 15px;
+  display: flex;
+  width: 80%;
+  position: sticky;
+  top: 50px;
+  background-color: white;
+  z-index: 3;
+}
+
+.search > form {
+  flex-grow: 1;
+  border-radius: 3px;
+}
+
+.search > form > input {
+  border: none;
+  border-radius: 3px;
+}
+
+#query::placeholder {
+  color: color(#575756 a(0.8));
+  background-color: $light-gray;
+  border-radius: 3px;
+  transition: 0.1s;
+}
+
+#query:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(175, 175, 175, 0.6);
+  border-color: $gray-inactive;
+  border-radius: 3px;
+}

@@ -1,0 +1,32 @@
+.no-favorites {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  p{
+    margin: 0;
+  }
+}
+
+.destination-tab-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  p{
+    margin: 0;
+  }
+}
+
+.favorites_tab_error {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  opacity: 0.21;
+  height: 66vh;
+  width: 80%;
+  div{
+    text-align: inherit;
+  }
+}

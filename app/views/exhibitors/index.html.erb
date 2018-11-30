@@ -2,20 +2,26 @@
 <%= render 'components/expo-tabs' %>
 <div class="other-page-content">
 
-  <div class="exhibitor-item-render exhibitor-list">
-    <% @expo.exhibitors.each do |exhibitor| %>
-      <%= render 'components/exhibitor_list_item', exhibitor: exhibitor %>
-    <% end %>
+  <div class="exhibitor-item-render exhibitor-list toggle-visibility">
+
+    <div class="search light-paragraph">
+      <%= form_tag expo_exhibitors_path(@expo), method: :get, remote: true do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find exhibitors", autocomplete:"off"
+        %>
+      <% end %>
     </div>
 
-  <div class="exhibitor-item-render favorite-list toggle-visibility">
-    <% if current_user %>
-      <% current_user.favorites.each do |favorite| %>
-        <%= render 'components/exhibitor_favorite_list', exhibitor: favorite.exhibitor %>
-      <% end %>
-    <% else %>
-      <%= render 'components/favorites_not_signed_in' %>
-    <% end %>
+    <div id="list-item-render">
+      <%= render 'components/exhibitor_list_item_render', exhibitors: @exhibitors %>
+     </div>
+
+  </div>
+
+  <div class="exhibitor-item-render favorite-list ">
+    <%= render 'components/user_favorites_render' %>
   </div>
 </div>
 

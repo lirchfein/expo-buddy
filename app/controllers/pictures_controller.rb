@@ -1,10 +1,4 @@
 class PicturesController < ApplicationController
-  # def test_pic_upload
-  #   @pictures = Picture.all
-  #   @picture = Picture.new
-  #   @exhibitor = Exhibitor.first
-  # end
-
   def create
     @exhibitor = Exhibitor.find(params[:exhibitor_id])
     @expo = @exhibitor.expo
@@ -12,7 +6,7 @@ class PicturesController < ApplicationController
     @picture.save
     respond_to do |format|
       format.html { redirect_to expo_exhibitor_path(@expo, @exhibitor) }
-      format.js # <-- will render `app/views/expos/bookmark.js.erb`
+      format.js # <-- will render `app/views/pictures/create.js.erb`
     end
   end
 
