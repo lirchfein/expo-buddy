@@ -1,7 +1,8 @@
 <%= link_to exhibitor_update_path(exhibitor), id: "#{exhibitor.id}a", remote: true do  %>
-  <% if favorite.visited %>
+  <% if favorite.nil? %>
+  <% elsif favorite.visited %>
     <i class="fas fa-check-circle" style= 'opacity: 0.8; color: #17B890;'></i>
-  <% else %>
+    <% else %>
     <i class="far fa-check-circle" style= 'opacity: 0.8;'></i>
   <% end %>
 <% end %>
