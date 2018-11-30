@@ -8,7 +8,7 @@
     <div class="exhibitor-item">
 
       <div class="exhibitor-info">
-        <h2><%= exhibitor.name %></h2>
+        <h2 class="bold-header"><%= exhibitor.name.length > 25 ? exhibitor.name.first(25) + '...' : exhibitor.name %></h2>
         <p><%= exhibitor.location %></p>
       </div>
 
