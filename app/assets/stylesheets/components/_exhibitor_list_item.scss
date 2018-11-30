@@ -1,11 +1,11 @@
 #list-item-render{
   width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
 }
 
 .exhibitor-item-render {
@@ -25,7 +25,7 @@
   justify-content: space-between;
   display: flex;
   height: 85px;
-  width: 80%;
+  width: 85%;
   align-items: center;
   text-align: center;
   border-bottom: solid 1px;
@@ -35,7 +35,7 @@
     text-decoration: none;
     display: flex;
     height: 100%;
-    width: 80%;
+    width: 85%;
     align-items: center;
     &:hover{
       text-decoration: none;
@@ -45,7 +45,7 @@
 
 .exhibitor-icon {
   height: 65%;
-  flex: 0 0 19%;
+  width: 20%;
   background-position: center !important;
   background-size: contain !important;
   background-repeat: no-repeat !important;
@@ -69,6 +69,7 @@
   flex-direction: column;
   h2{
     margin: 0;
+    font-size: 20px;
   }
   p{
     margin: 0;
