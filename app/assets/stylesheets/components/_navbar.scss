@@ -11,6 +11,7 @@
   flex-grow: 1;
 }
 
+
 .navbar-icons {
   padding: 16px;
   display: flex;
@@ -24,3 +25,8 @@
 }
 
 
+.white-icons {
+  i {
+    color: white;
+  }
+}
