@@ -16,4 +16,4 @@ addEventListenersToExpoTabs();
 import '../components/sidebar';
 
 import { addEventListenersToExhibitorTabs } from '../components/exhibitor-tabs.js';
-addEventListenersToExhibitorTabs();
+addEventListenersToExhibitorTabs();import "actiontext"
