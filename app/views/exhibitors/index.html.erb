@@ -1,23 +1,20 @@
 <%= render 'components/expo_banner', expo: @expo %>
 <%= render 'components/expo-tabs' %>
 <div class="other-page-content">
-
   <div class="exhibitor-item-render exhibitor-list toggle-visibility">
-
     <div class="search light-paragraph">
       <%= form_tag expo_exhibitors_path(@expo), method: :get, remote: true do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find exhibitors", autocomplete:"off"
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+        placeholder: "Find exhibitors", autocomplete:"off"
         %>
-      <% end %>
+        <% end %>
     </div>
 
     <div id="list-item-render">
       <%= render 'components/exhibitor_list_item_render', exhibitors: @exhibitors %>
-     </div>
-
+    </div>
   </div>
 
   <div class="exhibitor-item-render favorite-list ">
@@ -26,5 +23,4 @@
 </div>
 
 
-
-
+<%= javascript_pack_tag 'infinite_scroll' %>

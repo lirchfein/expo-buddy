@@ -3,9 +3,9 @@ class ExhibitorsController < ApplicationController
   def index
     @expo = Expo.find(params[:expo_id])
     if params[:query].present?
-      @exhibitors = @expo.exhibitors.order_by_name.search_by_name_and_description(params[:query])
+      @exhibitors = @expo.exhibitors.order_by_name.search_by_name_and_description(params[:query]).page(params[:page])
     else
-      @exhibitors = @expo.exhibitors.order_by_name
+      @exhibitors = @expo.exhibitors.order_by_name.page(params[:page])
     end
     respond_to do |format|
       format.html # index.html.erb
@@ -18,6 +18,7 @@ class ExhibitorsController < ApplicationController
     @expo = Expo.find(params[:expo_id])
     @picture = Picture.new
     @pictures = user_pictures.reverse!
+    @note = Note.new
     @favorite = current_user.favorites.find_by(exhibitor_id: @exhibitor.id) if !current_user.nil?
 
     # email sending

@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   after_action :store_location
 
+
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
     devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :avatar])
@@ -15,6 +16,7 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     stored_location_for(resource) || root_path
   end
+
   def store_location
     # store last url - this is needed for post-login redirect to whatever the user last visited.
     if (request.fullpath != "/users/sign_in" &&

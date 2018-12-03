@@ -8,10 +8,16 @@
     <%= action_cable_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
     <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 
+
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+  <!-- Text editor -->
+  <link rel="stylesheet" type="text/css" href="trix.css">
+  <script type="text/javascript" src="trix.js"></script>
+  <!-- Text editor -->
   </head>
   <body>
     <%#= render 'components/sidebar' %>
