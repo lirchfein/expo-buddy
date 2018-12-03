@@ -22,7 +22,7 @@
       </div>
     <% else %>
       <%= render 'pictures_area' %>
-      <%= render 'notes_area' %>
+      <%= render 'notes_area', note: @note %>
     <% end %>
   </div>
   <%= render 'components/exhibitor_tabs' %>

@@ -18,6 +18,7 @@ class ExhibitorsController < ApplicationController
     @expo = Expo.find(params[:expo_id])
     @picture = Picture.new
     @pictures = user_pictures.reverse!
+    @note = Note.new
   end
 
   def favorite
