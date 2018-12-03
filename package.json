@@ -6,7 +6,8 @@
     "actiontext": "https://github.com/rails/actiontext",
     "bootstrap": "3",
     "jquery": "^3.3.1",
-    "ngrok": "^3.1.0"
+    "ngrok": "^3.1.0",
+    "trix": "^1.0.0"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"

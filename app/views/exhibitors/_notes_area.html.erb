@@ -2,13 +2,21 @@
   <h2>My Notes :</h2>
 
   <div class="text-field">
+    <%#= simple_form_for([@exhibitor, note]) do |f| %>
+      <%#= f.input :message, as: :hidden %>
+      <!-- <trix-editor input="note_message"></trix-editor> -->
+      <%#= f.submit %>
+    <%# end %>
+
     <%= form_with(model: note, url: [@exhibitor, note]) do |form| %>
       <div class="field">
-        <%= form.label :content %>
-        <%= form.rich_text_area :content %>
+        <%= form.rich_text_area :message %>
+        <%= form.submit %>
       </div>
     <% end %>
   </div>
 
-  <%= note.content %>
+  <%= note.message %>
+
 </div>
+
