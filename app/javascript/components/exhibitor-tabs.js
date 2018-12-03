@@ -1,6 +1,6 @@
 function togglingVisibilityListItems(tab) {
   const descriptionDiv = document.querySelector(".exhibitor-description")
-  const notesDiv = document.querySelector(".exhibitor-notes")
+  const notesDiv = document.querySelector(".exhibitor-user-page")
    if (tab.classList.contains('right')) {
     descriptionDiv.classList.remove('no-show')
     notesDiv.classList.add('no-show')
@@ -24,3 +24,4 @@ function addEventListenersToExhibitorTabs() {
 }
 
 export {addEventListenersToExhibitorTabs};
+

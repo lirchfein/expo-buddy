@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   post 'pictures/:exhibitor_id/pic_upload', to: 'pictures#create', as: 'exhibitor_pictures'
+  post 'notes/:exhibitor_id/note', to: 'notes#create', as: 'exhibitor_notes'
 end

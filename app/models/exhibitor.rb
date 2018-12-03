@@ -3,6 +3,8 @@ class Exhibitor < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :pictures, dependent: :destroy
   has_many :users, through: :favorites
+  has_many :notes, dependent: :destroy
+
 
   scope :order_by_name, -> { order('LOWER(name) ASC') }
 

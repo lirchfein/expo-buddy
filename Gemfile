@@ -15,6 +15,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'google-webfonts', '~> 0.2.0'
+gem "actiontext", github: "rails/actiontext", require: "action_text"
+gem "image_processing", "~> 1.2" # for Active Storage variants
 # Image uploading
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'

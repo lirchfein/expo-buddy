@@ -18,6 +18,7 @@ class ExhibitorsController < ApplicationController
     @expo = Expo.find(params[:expo_id])
     @picture = Picture.new
     @pictures = user_pictures.reverse!
+    @note = Note.new
     @favorite = current_user.favorites.find_by(exhibitor_id: @exhibitor.id) if !current_user.nil?
     respond_to do |format|
       format.html
