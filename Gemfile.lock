@@ -50,6 +50,8 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
     autoprefixer-rails (9.3.1)
       execjs
@@ -105,6 +107,10 @@ GEM
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.6.0)
+      launchy (~> 2.2)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.1.1)
@@ -155,6 +161,7 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.7)
       pry (>= 0.10.4)
+    public_suffix (3.0.3)
     puma (3.12.0)
     rack (2.0.6)
     rack-proxy (0.6.5)
@@ -273,6 +280,7 @@ DEPENDENCIES
   google-webfonts (~> 0.2.0)
   image_processing (~> 1.2)
   jbuilder (~> 2.0)
+  letter_opener
   kaminari
   listen (~> 3.0.5)
   pg (~> 0.21)
