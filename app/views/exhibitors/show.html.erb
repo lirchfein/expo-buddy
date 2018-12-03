@@ -2,14 +2,14 @@
 
   <%= render 'components/exhibitor_banner', exhibitor: @exhibitor %>
 
-  <div class="exhibitor-description">
+  <div class="exhibitor-description <%= 'no-show' if @favorite %>">
 
     <p class="blocks"><%=  @exhibitor.location %></p>
     <p class="blocks"><%= @exhibitor.description %></p>
   </div>
 
 
-  <div class="exhibitor-notes no-show">
+  <div class="exhibitor-notes <%= 'no-show' unless @favorite %>">
 
   <% if current_user.nil? %>
     <div class= 'test'>
