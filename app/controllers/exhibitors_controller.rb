@@ -18,7 +18,14 @@ class ExhibitorsController < ApplicationController
     @expo = Expo.find(params[:expo_id])
     @picture = Picture.new
     @pictures = user_pictures.reverse!
-    @favorite =  current_user.favorites.find_by(exhibitor_id: @exhibitor.id) if !current_user.nil?
+    @favorite = current_user.favorites.find_by(exhibitor_id: @exhibitor.id) if !current_user.nil?
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "show",
+        :layout => 'pdf' # Excluding ".pdf" extension.
+      end
+    end
   end
 
   def favorite
@@ -60,6 +67,16 @@ class ExhibitorsController < ApplicationController
       format.js # <-- will render `app/views/exhibitors/favorites_tab.js.erb`
     end
   end
+
+  # def create_pdf
+  #   @exhibitor = Exhibitor.find(params[:id])
+  #   # respond_to do |format|
+  #   #   format.html
+  #   #   format.pdf do
+  #       render pdf: "create_pdf" # Excluding ".pdf" extension.
+  #     # end
+  #   # end
+  # end
 
   private
 
