@@ -18,6 +18,10 @@ gem 'google-webfonts', '~> 0.2.0'
 # Image uploading
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
+gem 'kaminari'
+gem 'betterlorem', '~> 0.1.2'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
+
 # Search
 gem 'pg_search'
 group :development do

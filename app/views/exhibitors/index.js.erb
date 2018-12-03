@@ -1,7 +1,27 @@
-function reRenderExhibitorList() {
-  let exhibitor_list_container = document.getElementById('list-item-render');
-  const html = '<%= j render "components/exhibitor_list_item_render", exhibitors: @exhibitors %>'
-  exhibitor_list_container.innerHTML = html
+function renderResultsPartial() {
+  return '<%= j render "components/exhibitor_list_item_render", exhibitors: @exhibitors %>'
 }
 
-reRenderExhibitorList()
+function replaceInnerResults() {
+  const exhibitor_list_container = document.getElementById('list-item-render');
+  exhibitor_list_container.innerHTML = renderResultsPartial();
+}
+
+function appendResults() {
+  const exhibitor_list_container = document.getElementById('list-item-render');
+  exhibitor_list_container.insertAdjacentHTML( 'beforeend', renderResultsPartial() );
+  document.querySelector('.pagination').remove();
+}
+
+function removePagination() {
+  document.querySelector('.pagination').remove();
+  // document.removeEventListener('scroll', function());
+}
+
+<% if @exhibitors.current_page == 1 %>
+  replaceInnerResults();
+<% elsif @exhibitors.current_page == @exhibitors.total_pages %>
+  removePagination();
+<% else %>
+  appendResults();
+<% end %>

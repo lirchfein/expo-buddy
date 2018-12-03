@@ -30,3 +30,9 @@
   border-color: $gray-inactive;
   border-radius: 3px;
 }
+
+.pagination {
+  span{
+    opacity: 0;
+  }
+}
