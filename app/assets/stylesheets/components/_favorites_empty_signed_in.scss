@@ -1,3 +1,14 @@
+#sign_in_button {
+  align-items: center;
+  a{
+    margin-top: 5px;
+    color: black;
+    &:hover{
+      color: white;
+    }
+  }
+}
+
 .no-favorites {
   display: flex;
   justify-content: center;
