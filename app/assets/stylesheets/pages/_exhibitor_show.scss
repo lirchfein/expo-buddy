@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 .page {
   height: 100%;
   padding-bottom: 50px;
@@ -11,11 +15,20 @@
   padding: 40px 40px 0px 40px;
 }
 
-.exhibitor-notes{
+.exhibitor-user-page{
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+  height: 70%;
+}
+
+.exhibitor-picutres {
+  height: 50%;
+}
+
+.exhibitor-notes {
+  height: 50%;
 }
 
 .add-picture-form {
@@ -51,7 +64,7 @@
   background-size: cover !important;
   background-repeat: no-repeat !important;
   padding-left: -15px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .small-padding {
@@ -66,12 +79,12 @@
   border: 2px solid #979797;
   box-sizing: border-box;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.47);
-  border-radius: 2px;
+  border-radius: 4px;
   text-align: center;
 }
 
 
-.test {
+.empty-box {
   display: flex;
   text-align: center;
   justify-content: center;
