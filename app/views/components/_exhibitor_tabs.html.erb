@@ -3,9 +3,13 @@
   <div class="left exhibitor-tab">
       <i <i class="fas fa-edit" style="font-size: 28px; color: $primary-dark;"></i>
        <p>NOTES</p>
+  <div class="left exhibitor-tab <%= 'exhibitor-select' if @favorite %>">
+      <i class="fas fa-images" style="font-size: 28px; color: $primary-dark;"></i>
   </div>
-  <div class="right exhibitor-tab exhibitor-select">
+  <div class="right exhibitor-tab <%= 'exhibitor-select' unless @favorite %>">
       <i class="fas fa-info-circle " style="font-size: 28px; color: $primary-dark;"></i>
       <p>ABOUT</p>
   </div>
 </div>
+
+

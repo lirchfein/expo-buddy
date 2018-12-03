@@ -23,15 +23,15 @@
   }
   p {
     margin: 0;
-    font-weight: 300;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 13px;
   }
 }
 
 .card-link {
   color: $primary-dark;
   &:hover {
-    color: #73F7D4;
+    color: inherit;
   }
 }
 

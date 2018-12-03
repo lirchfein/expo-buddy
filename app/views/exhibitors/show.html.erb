@@ -2,7 +2,8 @@
 
   <%= render 'components/exhibitor_banner', exhibitor: @exhibitor %>
 
-  <div class="exhibitor-description">
+   
+  <div class="exhibitor-description <%= 'no-show' if @favorite %>">
     <p class="blocks">Location :</p>
     <p class="blocks"><%=  @exhibitor.location %></p>
     <p class="blocks">Descritpion :</p>
@@ -10,7 +11,7 @@
   </div>
 
 
-  <div class="exhibitor-user-page no-show">
+  <div class="exhibitor-notes <%= 'no-show' unless @favorite %>">
 
     <% if current_user.nil? %>
       <div class= "empty-box">
@@ -25,6 +26,8 @@
       <%= render 'notes_area', note: @note %>
     <% end %>
   </div>
+
+  <% end %>
   <%= render 'components/exhibitor_tabs' %>
 </div>
 

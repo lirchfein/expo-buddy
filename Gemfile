@@ -20,8 +20,17 @@ gem "image_processing", "~> 1.2" # for Active Storage variants
 # Image uploading
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
+# Infinite Scroll
+gem 'kaminari'
+gem 'betterlorem', '~> 0.1.2'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
+# pdf creation
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 # Search
 gem 'pg_search'
+# auth
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end

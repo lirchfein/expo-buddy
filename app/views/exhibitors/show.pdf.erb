@@ -1,0 +1,23 @@
+<!-- Generate date line/ -->
+<% @exhibitor.expo.start_date.month == @exhibitor.expo.start_date.month ? start_d = @exhibitor.expo.start_date.day.to_s + '.' : start_d = @exhibitor.expo.start_date.strftime('%d. %b')%>
+
+<!-- start of pdf content -->
+<h1>
+  <%= @exhibitor.name %>
+</h1>
+<h2>
+@<%= @exhibitor.expo.name %> (<%= start_d %> - <%= @exhibitor.expo.end_date.strftime('%d. %b %Y') %>)
+</h2>
+<% public_id_array = [] %>
+<% @pictures.each do |picture| %>
+  <% public_id_array << picture.pic.file.public_id %>
+<% end %>
+h
+<% zip_link =  Cloudinary::Utils.download_zip_url(
+:public_ids => public_id_array,
+:resource_type => 'image') %>
+<h3>PICTURES</h3>
+<%= link_to zip_link do  %>
+  <p>Klick me to download a zipfile of your pictures for <%= @exhibitor.name %>!</p>
+<% end %>
+<h3>MEMOS</h3>

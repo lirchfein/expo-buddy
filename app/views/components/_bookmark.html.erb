@@ -1,16 +1,14 @@
-
-<%= link_to bookmark_path(expo), id: "expo_#{expo.id.to_s}", remote: true do %>
-  <% if current_user %>
+<% if current_user %>
+  <%= link_to bookmark_path(expo), remote: true do %>
     <% bookmark = current_user.bookmarks.find_by(expo_id: expo.id) %>
-    <% if bookmark%>
+    <% if bookmark %>
       <i class="fas fa-bookmark bm-card-size"></i>
-      <%#= cl_image_tag("expo-buddy/buttons/Bookmark_full", {class: "bm-card-size"}) %>
     <% else %>
       <i class="far fa-bookmark bm-card-size"></i>
-      <%#= cl_image_tag("expo-buddy/buttons/Bookmark_empty", {class: "bm-card-size"}) %>
     <% end %>
-  <% else %>
+  <% end %>
+<% else %>
+  <%= link_to new_user_session_path do %>
     <i class="far fa-bookmark bm-card-size"></i>
-    <%#= cl_image_tag("expo-buddy/buttons/Bookmark_empty", {class: "bm-card-size"}) %>
   <% end %>
 <% end %>
