@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ExpoBuddy</title>
+    <meta charset="UTF-8">
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag wicked_pdf_asset_base64("pdf") %>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>

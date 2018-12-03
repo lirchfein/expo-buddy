@@ -1,0 +1,49 @@
+body {
+  h1, h2 {
+    font-family: "Nunito", "Helvetica", "sans-serif";
+    font-weight: 800;
+  }
+  h1 {
+    font-size: 300px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+  }
+  h2 {
+    font-size: 200px;
+    margin-top: 0;
+    padding-top: 0;
+    font-weight: 300;
+  }
+  h3, p {
+    font-family: "Roboto", "Helvetica", "sans-serif";
+  }
+
+  h3 {
+    font-size: 150px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+  }
+  p {
+    font-size: 100px;
+    margin-top: 0;
+    padding-top: 50px;
+  }
+
+}
+
+.flex-pic-container {
+  display: flex;
+  flex-direction: row;
+}
+
+div {
+  display: inline !important;
+}
+
+img {
+  width: 32%;
+  margin: 30px;
+}
+
+
