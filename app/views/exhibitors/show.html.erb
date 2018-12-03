@@ -41,8 +41,9 @@
       <% end %>
     </div>
   </div>
-  <%#= link_to "Create PDF", expo_exhibitor_path(@exhibitor, format: :pdf) %>
-  <%# end %>
+  <%= link_to "Send PDF by email", send_data_exhibitor_path(@exhibitor) %>
+  <%= render 'components/exhibitor_tabs' %>
+  <% end %>
   <%= render 'components/exhibitor_tabs' %>
 </div>
 
