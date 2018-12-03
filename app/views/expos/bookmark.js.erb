@@ -1,7 +1,6 @@
 function toggleBookmark() {
   html = '<%= j render "components/bookmark", expo: @expo %>'
   const bookmark_container = document.getElementById('<%="expo_#{@expo.id}"%>');
-  console.log(bookmark_container)
   bookmark_container.innerHTML = html
 }
 
