@@ -12,11 +12,14 @@
             <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543929725/expo-buddy/logos/logo-png.png", id: "logo-img-head" %>
           </div>
           <div>
-            <h2 class="light-font">Organize all your expos and exhibitor information - in just one single app!</h2>
+            <h2 class="light-font" id="sub-headline">Organize all your expos and exhibitor information - in just one single app!</h2>
           </div>
           <div class="medium-margin-top-bottom">
             <%= link_to "Let's go buddy!", expos_path, class: 'btn btn-blank padding-btn bold-font'  %>
           </div>
+        </div>
+        <div>
+          <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543918679/expo-buddy/logos/phone_img.svg", id:"phone-pic-desktop" %>
         </div>
 
       </div>
@@ -32,7 +35,7 @@
       <div class="landing-header-desktop">
 
         <div class="photo-flex-container negtativ-margin-top">
-          <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543918679/expo-buddy/logos/phone_img.svg", id:"phone-pic" %>
+          <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543918679/expo-buddy/logos/phone_img.svg", id:"phone-pic-mobile" %>
           <h2 id="phone-text" class="light-font explanatory-text" >Find all relevant  expos and save  notes with the exhibitors that you visitited.</h2>
         </div>
       </div>
@@ -43,9 +46,9 @@
     <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543927772/expo-buddy/logos/foot-prints-right-middle.svg", id:"foot-prints-right-middle" %>
   </div>
 
-  <div class="container negtativ-margin-bottom">
-    <div class="margin-left-right">
-      <div class="landing-header-desktop">
+  <div class="">
+    <div>
+      <div>
       <div>
         <div class="info-flex">
           <div class="large-margin-top column-flex">
@@ -90,12 +93,12 @@
     <div class="landing-header-desktop">
 
 
-      <div class="button-text-container medium-margin-top-bottom">
+      <div class="button-text-container medium-margin-top-bottom" id="flex-row-desktop">
         <div>
           <h2 class="light-font text-centered">Make every expo visit a successfull and productive day, by taking notes with EXPObuddy!</h2>
         </div>
         <div class="medium-margin-top-bottom">
-          <%= link_to "Start browsing expos", expos_path, class: 'btn btn-blank padding-btn bold-font'  %>
+          <%= link_to "Start browsing expos", expos_path, class: 'btn btn-blank padding-btn bold-font'%>
         </div>
       </div>
     </div>
