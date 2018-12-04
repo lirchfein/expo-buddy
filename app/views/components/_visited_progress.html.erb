@@ -1,5 +1,7 @@
-<p><%= favorites %></p>
-<p><%= visited %></p>
-<% progress = "#{visited * 100 / favorites}%" %>
-<p><%= progress %></p>
-<div class="progress-background"></div>
+<% progress = visited * 100 / favorites %>
+<div class="progress-box">
+  <p><%= visited %> out of <%= favorites %> exhibitors visited</p>
+  <div class="progress-background">
+    <div class="progress-green" style="width: <%= progress %>%"></div>
+  </div>
+</div>
