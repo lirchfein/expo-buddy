@@ -23,7 +23,9 @@
       </div>
     <% else %>
       <%= render 'pictures_area' %>
-      <%= render 'notes_area', note: @note %>
+      <div>
+        <%= render 'notes_area', note: @note %>
+      </div>
     <% end %>
   </div>
 
