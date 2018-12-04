@@ -1,22 +1,28 @@
 <div class="exhibitor-notes">
   <h2>My Notes :</h2>
 
-  <div class="text-field">
     <%#= simple_form_for([@exhibitor, note]) do |f| %>
       <%#= f.input :message, as: :hidden %>
       <!-- <trix-editor input="note_message"></trix-editor> -->
       <%#= f.submit %>
     <%# end %>
 
+<input id="display-overlay"
+       type="button"
+       value="ADspaly">
+
+<div id="overlay" style="display: block;">
+  <div id="overlay-box">
     <%= form_with(model: note, url: [@exhibitor, note]) do |form| %>
       <div class="field">
         <%= form.rich_text_area :message %>
-        <%= form.submit %>
+        <%= form.submit 'Create note', class: 'btn btn-note'%>
       </div>
     <% end %>
   </div>
-
+</div>
   <%= note.message %>
+<%#= raise %>
 
 </div>
 

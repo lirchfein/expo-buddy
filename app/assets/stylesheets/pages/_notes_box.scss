@@ -1,6 +1,43 @@
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    // cursor: pointer; /* Add a pointer on hover */
+}
+
+#overlay-box{
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    background: white;
+    height: 50%;
+    width: 90%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    // -ms-transform: translate(-50%,-50%);
+    form {
+      width: 100%;
+    }
+}
+
 #note_content {
   border: black;
   border-style: solid;
+}
+
+.note-btn {
+  width: 100%;
+}
+
+.trix-toolbar .trix-button-group {
+  margin-bottom: 0px;
 }
 
 .trix-button--icon-strike {
@@ -26,4 +63,3 @@
 .trix-button--icon-heading-1 {
   display: none;
 }
-
