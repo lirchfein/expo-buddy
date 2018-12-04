@@ -28,6 +28,10 @@
   }
 }
 
+.block-display-card {
+  display: block;
+}
+
 .card-link {
   color: $primary-dark;
   &:hover {
