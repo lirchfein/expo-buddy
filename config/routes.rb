@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     resources :exhibitors, only: %i[index show create]
   end
 
+  resources :exhibitors, only: [] do
+    get 'send_data', on: :member
+  end
+
   root to: 'pages#home'
 
   post 'pictures/:exhibitor_id/pic_upload', to: 'pictures#create', as: 'exhibitor_pictures'

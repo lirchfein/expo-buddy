@@ -2,7 +2,7 @@
 
   <%= render 'components/exhibitor_banner', exhibitor: @exhibitor %>
 
-   
+
   <div class="exhibitor-description <%= 'no-show' if @favorite %>">
     <p class="blocks">Location :</p>
     <p class="blocks"><%=  @exhibitor.location %></p>
@@ -11,7 +11,7 @@
   </div>
 
 
-  <div class="exhibitor-notes <%= 'no-show' unless @favorite %>">
+  <div class="exhibitor-user-page <%= 'no-show' unless @favorite %>">
 
     <% if current_user.nil? %>
       <div class= "empty-box">
@@ -27,7 +27,9 @@
     <% end %>
   </div>
 
-  <% end %>
+  <%= link_to "Send PDF by email", send_data_exhibitor_path(@exhibitor) %>
+  <%= render 'components/exhibitor_tabs' %>
+  <%# end %>
   <%= render 'components/exhibitor_tabs' %>
 </div>
 
