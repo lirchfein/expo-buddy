@@ -1,6 +1,5 @@
 #overlay {
     position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
     height: 100%; /* Full height (cover the whole page) */
     top: 0;
@@ -21,6 +20,10 @@
     width: 90%;
     transform: translate(-50%,-50%);
     display: flex;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
     // -ms-transform: translate(-50%,-50%);
     form {
       width: 100%;
@@ -32,12 +35,27 @@
   border-style: solid;
 }
 
-.note-btn {
+#note_message {
+  height: 14em;
+  max-height: 14em;
+  overflow: auto;
+}
+
+#btn-close {
+  position: absolute;
+  top: 29%;
+  right: 9%;
+  font-size: 30px;
+  color: primary-gray;
+  z-index: 2;
+}
+
+#btn-note {
   width: 100%;
 }
 
-.trix-toolbar .trix-button-group {
-  margin-bottom: 0px;
+#trix-toolbar-1 {
+  width: 10px;
 }
 
 .trix-button--icon-strike {
