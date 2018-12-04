@@ -20,4 +20,4 @@ import { addEventListenersToExhibitorTabs } from '../components/exhibitor-tabs.j
 addEventListenersToExhibitorTabs();
 
 import "actiontext";
-import "../../../node_modules/trix/dist/trix.css"
+// import "../../../node_modules/trix/dist/trix.css"
