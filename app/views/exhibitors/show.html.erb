@@ -2,51 +2,40 @@
 
   <%= render 'components/exhibitor_banner', exhibitor: @exhibitor %>
 
-  <div class="exhibitor-description <%= 'no-show' if @favorite %>">
 
+  <div class="exhibitor-description <%= 'no-show' if @favorite %>">
+    <p class="blocks">Location :</p>
     <p class="blocks"><%=  @exhibitor.location %></p>
+    <p class="blocks">Descritpion :</p>
     <p class="blocks"><%= @exhibitor.description %></p>
   </div>
 
 
-  <div class="exhibitor-notes <%= 'no-show' unless @favorite %>">
+  <div class="exhibitor-user-page <%= 'no-show' unless @favorite %>">
 
-  <% if current_user.nil? %>
-    <div class= 'test'>
-      <div class="exhibitor-item" style="margin-right: 5%;">
-        <div class="exhibitor-info">
-          <h2>Please Sign in to add to see your Pictures !</h2>
+    <% if current_user.nil? %>
+      <div class= "empty-box">
+        <div class="exhibitor-item" style="margin-right: 5%;">
+          <div class="exhibitor-info">
+            <h2>Please Sign in to add to see your Pictures !</h2>
+          </div>
         </div>
       </div>
-    </div>
-  <% else %>
-    <div class="add-picture-form">
-      <%= simple_form_for([ @exhibitor, @picture ], remote: true) do |f| %>
-        <%= f.input :user_id, input_html: {value: "#{current_user.id}", class: "hidden"}, :label => false %>
-        <%= f.input :exhibitor_id, input_html: {value: "#{@exhibitor.id}", class: "hidden"}, :label => false %>
-        <%= f.input :pic, input_html: {class: "hidden", id: "button-photo-upload"}, :label => false %>
-        <%= f.input :pic_cache, as: :hidden %>
-        <%= f.submit "Submit", class: "hidden button-submit" %>
-      <% end %>
-    </div>
-    <div  class="col-xs-4 small-padding">
-      <div id="add-icon" class ="icon-add">
-        <%= cl_image_tag('https://res.cloudinary.com/dfcud6por/image/upload/c_mpad,h_100,w_100/v1543412664/noun_Plus_341859.png', :width=>100, :height=>96, :crop=>"mpad") %>
+    <% else %>
+      <%= render 'pictures_area' %>
+      <div>
+        <%= render 'notes_area', note: @note %>
       </div>
-    </div>
-
-    <div id="pic-div">
-      <% @pictures.each do |picture|%>
-        <%= render "components/thumnail_pic", pic: picture.pic %>
-      <% end %>
-    </div>
+    <% end %>
   </div>
-  <%#= link_to "Create PDF", expo_exhibitor_path(@exhibitor, format: :pdf) %>
-  <%# end %>
+
+  <%= link_to "Send PDF by email", send_data_exhibitor_path(@exhibitor) %>
   <%= render 'components/exhibitor_tabs' %>
+  <%# end %>
 </div>
 
 
 <%= content_for :after_js do %>
   <%= javascript_pack_tag "picture_upload" %>
+  <%= javascript_pack_tag "overlay_notes" %>
 <% end %>

@@ -1,9 +1,11 @@
 <%= link_to exhibitor_update_path(exhibitor), id: "#{exhibitor.id}a", remote: true do  %>
   <% if favorite.nil? %>
   <% elsif favorite.visited %>
-    <i class="fas fa-check-circle" style= 'opacity: 0.8; color: #17B890;'></i>
+    <%= cl_image_tag("expo-buddy/buttons/foot-prints-full.svg",
+      width: 27, height: 25, crop: :fill) %>
     <% else %>
-    <i class="far fa-check-circle" style= 'opacity: 0.8;'></i>
+    <%= cl_image_tag("expo-buddy/buttons/foot-prints-empty.svg",
+      width: 27, height: 25, crop: :fill) %>
   <% end %>
 <% end %>
 

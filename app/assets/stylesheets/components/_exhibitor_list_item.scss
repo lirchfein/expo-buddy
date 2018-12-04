@@ -44,14 +44,12 @@
 }
 
 .exhibitor-icon {
-  height: 65%;
-  width: 20%;
+  height: 65px;
+  width: 65px;
   background-position: center !important;
   background-size: contain !important;
   background-repeat: no-repeat !important;
   border-radius: 5px;
-  border: solid 0.5px;
-  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .exhibitor-item {
@@ -74,4 +72,9 @@
   p{
     margin: 0;
   }
+}
+
+.favorite-cont {
+  display: flex;
+  align-items: center;
 }

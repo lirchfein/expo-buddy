@@ -6,18 +6,16 @@
   <%= @exhibitor.name %>
 </h1>
 <h2>
-@<%= @exhibitor.expo.name %> (<%= start_d %> - <%= @exhibitor.expo.end_date.strftime('%d. %b %Y') %>)
+<%= @exhibitor.expo.name %> (<%= start_d %> - <%= @exhibitor.expo.end_date.strftime('%d. %b %Y') %>)
 </h2>
 <% public_id_array = [] %>
 <% @pictures.each do |picture| %>
   <% public_id_array << picture.pic.file.public_id %>
 <% end %>
-h
 <% zip_link =  Cloudinary::Utils.download_zip_url(
 :public_ids => public_id_array,
 :resource_type => 'image') %>
 <h3>PICTURES</h3>
-<%= link_to zip_link do  %>
-  <p>Klick me to download a zipfile of your pictures for <%= @exhibitor.name %>!</p>
-<% end %>
+  <p>Klick here to download your pictures for <%= @exhibitor.name %>: <a href='<%="#{zip_link}"%>'>Zip-File</a></p>
+
 <h3>MEMOS</h3>
