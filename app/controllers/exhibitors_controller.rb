@@ -19,6 +19,7 @@ class ExhibitorsController < ApplicationController
     @picture = Picture.new
     @pictures = user_pictures.reverse!
     @note = Note.new
+    @notes = user_notes.reverse!
     @favorite = current_user.favorites.find_by(exhibitor_id: @exhibitor.id) if !current_user.nil?
 
     # email sending
@@ -105,5 +106,19 @@ class ExhibitorsController < ApplicationController
     end
     pictures_array.sort_by {:id}
     return pictures_array
+  end
+
+  def user_notes
+    all_notes = Note.all
+    user = current_user.id if current_user != nil
+    notes_array = []
+
+    all_notes.each do |note|
+      if note.user_id == user && note.exhibitor_id == @exhibitor.id
+        notes_array << note
+      end
+    end
+    notes_array.sort_by {:id}
+    return notes_array
   end
 end
