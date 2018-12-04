@@ -2,6 +2,12 @@ function toggleBookmark() {
   html = '<%= j render "components/bookmark", expo: @expo %>'
   const bookmark_container = document.getElementById('<%="expo_#{@expo.id}"%>');
   bookmark_container.innerHTML = html
+  if ('<%= @flash_message %>' !== 'false') {
+    console.log('helloooooooo')
+    $('.flash-message').fadeIn(400);
+    $('.flash-message').html('<p><%= @flash_message %></p>');
+    $('.flash-message').delay(1200).fadeOut(500);
+  }
 }
 
 toggleBookmark()

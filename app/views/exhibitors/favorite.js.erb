@@ -2,6 +2,12 @@ function reRenderStar() {
   let favorite_containers = document.getElementById('<%= @exhibitor.id %>');
   const html = '<%= j render "components/favorite", expo: @expo, exhibitor: @exhibitor %>'
   favorite_containers.innerHTML = html
+  if ('<%= @flash_message %>' !== 'false') {
+    $('.flash-message').fadeIn(400);
+    $('.flash-message').html('<p><%= @flash_message %></p>');
+    $('.flash-message').delay(1200).fadeOut(500);
+  }
 }
 
 reRenderStar()
+
