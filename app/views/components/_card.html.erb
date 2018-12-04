@@ -1,10 +1,12 @@
 <div class="card" style="background-image: linear-gradient(174deg, rgba(0,0,0,0) 60%, rgba(80, 227, 194, 0.8) 60%), url('<%= cl_image_path(expo.cover_pic) %>');">
   <div class="card-content">
     <%= link_to expo_exhibitors_path(expo), class:'card-link' do %>
-      <div class="card-text">
-        <% expo.start_date.month == expo.start_date.month ? start_d = expo.start_date.day.to_s + '.' : start_d = expo.start_date.strftime('%d. %b')%>
-        <p><%= start_d %> - <%= expo.end_date.strftime('%d. %b %Y') %></p>
-        <h2><%= expo.name %></h2>
+      <div class="block-display-card">
+        <div class="card-text">
+          <% expo.start_date.month == expo.start_date.month ? start_d = expo.start_date.day.to_s + '.' : start_d = expo.start_date.strftime('%d. %b')%>
+          <p><%= start_d %> - <%= expo.end_date.strftime('%d. %b %Y') %></p>
+          <h2><%= expo.name %></h2>
+        </div>
       </div>
       <div class="card-text small-margin-top">
         <p><%= expo.exhibitors_num %> exhibitors | <%= expo.visitors_num %> visitors | <%= expo.square_meters %> m2</p>
