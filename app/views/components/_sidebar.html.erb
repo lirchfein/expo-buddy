@@ -4,7 +4,7 @@
 
         <div class="relative-container">
           <div id="dismiss">
-              <i class="fas fa-bars" id="blue-burger"></i>
+              <i class="fas fa-bars shadowless" id="blue-burger"></i>
           </div>
 
 
@@ -17,7 +17,7 @@
                   <ul class="list-unstyled components">
 
                       <%= link_to expos_path, class: "sidebar-icon-blue" do %>
-                        <h3><i class="fas fa-bookmark"></i> EXPOS</h3>
+                        <h3><i class="fas fa-bookmark shadowless"></i> EXPOS</h3>
                       <% end %>
 
                       <!-- check if user has expos stored at all -->
@@ -72,7 +72,7 @@
           <% if current_user %>
             <div id="log-out-div">
               <%= link_to(destroy_user_session_path, method: 'delete', class: "sidebar-icon-blue") do %>
-                <h3>LOG OUT <i class="fas fa-sign-out-alt"></i></h3>
+                <h3>LOG OUT <i class="fas fa-sign-out-alt shadowless"></i></h3>
               <% end %>
             </div>
           <% end %>
