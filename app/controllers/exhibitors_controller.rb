@@ -20,13 +20,25 @@ class ExhibitorsController < ApplicationController
     @pictures = user_pictures.reverse!
     @note = Note.new
     @favorite = current_user.favorites.find_by(exhibitor_id: @exhibitor.id) if !current_user.nil?
-    respond_to do |format|
-      format.html
-      format.pdf do
-        render pdf: "show",
-        :layout => 'pdf' # Excluding ".pdf" extension.
-      end
-    end
+
+    # email sending
+    # respond_to do |format|
+    #   format.html
+    #   format.pdf do
+    #     render pdf: "show",
+    #     :layout => 'pdf' # Excluding ".pdf" extension.
+    #   end
+    # end
+  end
+
+  def send_data
+    @user = current_user
+    @exhibitor = Exhibitor.find(params[:id])
+    # @pictures = user_pictures.reverse!
+    # pdf = render_to_string('show.pdf.erb', layout: 'pdf', template: 'exhibitors/show')
+    UserMailer.export(@user.id, @exhibitor.id).deliver
+    redirect_to expo_exhibitors_path(@exhibitor)
+    #flash[:notice] = 'Email has been sent!'
   end
 
   def favorite
