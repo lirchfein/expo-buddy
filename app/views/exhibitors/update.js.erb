@@ -2,6 +2,11 @@ function reRenderCheck() {
   let check_containers = document.getElementById('<%= @exhibitor.id %>a');
   const html = '<%= j render "components/visited", favorite: @favorite, exhibitor: @exhibitor %>'
   check_containers.innerHTML = html
+  if ('<%= @flash_message %>' !== 'false') {
+    $('.flash-message').fadeIn(400);
+    $('.flash-message').html('<p><%= @flash_message %></p>');
+    $('.flash-message').delay(1200).fadeOut(500);
+  }
 }
 
 reRenderCheck()

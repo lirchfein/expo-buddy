@@ -48,8 +48,10 @@ class ExhibitorsController < ApplicationController
 
     if @favorite
       @favorite.destroy
+      @flash_message = false
     else
       Favorite.create(exhibitor_id: params[:id], user_id: current_user.id)
+      @flash_message = "#{@exhibitor.name} has been added to your Favorites!"
     end
     respond_to do |format|
       format.html { redirect_to expo_exhibitors_path(@exhibitor.expo) }
@@ -62,8 +64,10 @@ class ExhibitorsController < ApplicationController
     @favorite = current_user.favorites.find_by(exhibitor_id: @exhibitor.id)
     if @favorite.visited == true
       @favorite.visited = false
+      @flash_message = false
     else
       @favorite.visited = true
+      @flash_message = "Marked #{@exhibitor.name} as visited!"
     end
     if @favorite.save
       respond_to do |format|
