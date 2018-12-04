@@ -2,6 +2,40 @@
   margin-top: 160px;
 }
 
+.landing-wrapper {
+  position: relative;
+}
+
+#foot-prints-top-left {
+  position: absolute;
+  width: 291px;
+  top: -5px;
+  left: -5px;
+}
+
+#foot-prints-right-middle {
+  width: 100%;
+  z-index: -2;
+}
+
+#foot-prints-left-bottom {
+  width: 150px;
+  margin-left: -10px;
+  margin-bottom: -95px;
+  z-index: -2;
+}
+
+#rectangle-first {
+   z-index: -2;
+   width: 100%;
+   padding: 0 -15px;
+}
+
+#rectangle-second {
+  z-index: -2;
+  width: 100%;
+}
+
 .button-text-container {
   display: flex;
   flex-direction: column;
@@ -34,7 +68,7 @@
 
 #phone-text {
   padding-left: 14px;
-  margin-top: 50px;
+  margin-top: 88px;
 }
 
 .info-flex {
@@ -64,6 +98,18 @@
 
 .large-margin-top {
   margin-top: 100px;
+}
+
+.large-margin-bottom {
+  margin-bottom: 100px;
+}
+
+.negtativ-margin-top {
+  margin-top: -70px;
+}
+
+.negtativ-margin-bottom {
+  margin-bottom: -130px;
 }
 
 .column-flex {
@@ -110,6 +156,10 @@
 
 .padding-btn {
   padding: 12px 30px;
+}
+
+.landing-footer-mobile {
+  margin-top: 50px;
 }
 
 
