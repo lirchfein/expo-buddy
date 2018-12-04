@@ -1,6 +1,5 @@
 #overlay {
     position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
     height: 100%; /* Full height (cover the whole page) */
     top: 0;
@@ -38,22 +37,25 @@
 
 #note_message {
   height: 14em;
+  max-height: 14em;
+  overflow: auto;
 }
 
 #btn-close {
   position: absolute;
-  top: 22%;
-  right: 5%;
+  top: 29%;
+  right: 9%;
   font-size: 30px;
-  color: black;
+  color: primary-gray;
+  z-index: 2;
 }
 
 #btn-note {
   width: 100%;
 }
 
-.trix-toolbar .trix-button-group {
-  margin-bottom: 0px;
+#trix-toolbar-1 {
+  width: 10px;
 }
 
 .trix-button--icon-strike {
