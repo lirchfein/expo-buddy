@@ -54,6 +54,15 @@
   width: 100%;
 }
 
+.memos-box {
+  background-color: $light-gray;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  padding: 0.9em;
+  border-radius: 5px;
+  overflow-wrap: break-word;
+}
+
 #trix-toolbar-1 {
   width: 10px;
 }
