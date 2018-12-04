@@ -8,8 +8,7 @@
     <%= action_cable_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-    <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
+    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 
 
@@ -18,6 +17,7 @@
   <link rel="stylesheet" type="text/css" href="trix.css">
   <script type="text/javascript" src="trix.js"></script>
   <!-- Text editor -->
+  <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
   </head>
   <body>
     <%#= render 'components/sidebar' %>
