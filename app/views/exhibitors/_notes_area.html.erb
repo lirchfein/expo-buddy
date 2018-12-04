@@ -12,11 +12,12 @@
        value="ADspaly">
 
 <div id="overlay" style="display: block;">
+  <div id="btn-close"><i class="fas fa-window-close"></i></div>
   <div id="overlay-box">
     <%= form_with(model: note, url: [@exhibitor, note]) do |form| %>
       <div class="field">
         <%= form.rich_text_area :message %>
-        <%= form.submit 'Create note', class: 'btn btn-note'%>
+        <%= form.submit 'Create note', id: 'btn-note'%>
       </div>
     <% end %>
   </div>

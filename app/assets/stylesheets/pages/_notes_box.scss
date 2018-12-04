@@ -21,6 +21,10 @@
     width: 90%;
     transform: translate(-50%,-50%);
     display: flex;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
     // -ms-transform: translate(-50%,-50%);
     form {
       width: 100%;
@@ -32,7 +36,19 @@
   border-style: solid;
 }
 
-.note-btn {
+#note_message {
+  height: 14em;
+}
+
+#btn-close {
+  position: absolute;
+  top: 22%;
+  right: 5%;
+  font-size: 30px;
+  color: black;
+}
+
+#btn-note {
   width: 100%;
 }
 
