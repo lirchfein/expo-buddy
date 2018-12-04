@@ -4,9 +4,9 @@
 
 
   <div class="exhibitor-description <%= 'no-show' if @favorite %>">
-    <h3 class="blocks light-font">LOCATION:</h3>
+    <h3>LOCATION</h3>
     <p ><%=  @exhibitor.location %></p>
-    <h3 class="blocks light-font">DESCRIPTION:</h3>
+    <h3>DESCRIPTION</h3>
     <p ><%= @exhibitor.description %></p>
   </div>
 
@@ -22,9 +22,11 @@
         </div>
       </div>
     <% else %>
-      <%= render 'pictures_area' %>
-      <div>
-        <%= render 'notes_area', note: @note %>
+      <div id="pictures-container">
+          <%= render 'pictures_area' %>
+      </div>
+      <div id="memos-container">
+          <%= render 'notes_area', note: @note %>
       </div>
     <% end %>
   </div>

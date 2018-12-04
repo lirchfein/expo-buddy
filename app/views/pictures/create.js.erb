@@ -1,7 +1,7 @@
 function addPicture() {
   HTML = '<%= j render "components/thumnail_pic", pic: Picture.all.last.pic %>'
-  const picsDiv = document.getElementById('pic-div');
-  picsDiv.insertAdjacentHTML('afterbegin', HTML);
+  const picsDiv = document.getElementById('add-icon');
+  picsDiv.insertAdjacentHTML('afterend', HTML);
 }
 
 addPicture()

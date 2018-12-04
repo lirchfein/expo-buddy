@@ -1,9 +1,10 @@
-<div class="exhibitor-notes">
-  <h2>My Notes :</h2>
+<h3>MEMOS</h3>
 
-<input id="display-overlay"
+
+<!-- <input id="display-overlay"
        type="button"
-       value="ADspaly">
+       value="ADspaly"> -->
+
 
 <!-- The overlay -->
   <div id="overlay" class="no-show">
@@ -19,11 +20,17 @@
   </div>
 
 <!-- The notes block -->
+<div class="row">
+  <div class="col-xs-12">
+    <div id="display-overlay" class ="memos-box flex-align-single-item">
+      <!-- <h3 class="light-font remove-margin"><i class="fas fa-plus"></i> Add memo</h3> -->
+     <%= cl_image_tag('https://res.cloudinary.com/dfcud6por/image/upload/c_mpad,h_100,w_100/v1543412664/noun_Plus_341859.png', :width=>50, :height=>50, :crop=>"fill") %>
+    </div>
+  </div>
+</div>
+
 <div id="memo-block">
   <% @notes.each do |note|%>
     <%= render 'components/memo', note: note%>
   <% end %>
 </div>
-
-</div>
-
