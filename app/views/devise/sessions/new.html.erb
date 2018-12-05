@@ -1,20 +1,24 @@
-<h2>Log in</h2>
+<%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543926067/expo-buddy/logos/foot-prints-top-left.svg", id:"foot-prints-top-left"  %>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+<div class="devise-form">
+  <h1>Log in</h1>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" } %>
+      <%= f.input :password,
+                  required: false,
+                  input_html: { autocomplete: "current-password" } %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
 
-<%= render "devise/shared/links" %>
+    <div class="form-actions center-single-flex small-margin-top-bottom">
+      <%= f.button :submit, "Log in", :class => "btn btn-blank" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>
