@@ -1,7 +1,7 @@
 <div class="expo-tabs">
 
-    <%= link_to favorites_tab_path, remote: true do%>
-      <div class="left expo-tab toggle-border">
+    <%= link_to favorites_tab_path(expo: @expo), remote: true do%>
+      <div class="left expo-tab <%= 'toggle-border' unless @current_favorites.empty? %>">
         <div class= "favorite-star">
           <i class="fas fa-star"></i>
         </div>
@@ -11,7 +11,7 @@
       </div>
     <% end %>
 
-    <div class="right expo-tab ">
+    <div class="right expo-tab <%= 'toggle-border' if @current_favorites.empty? %>">
 
       <div class="exhibitor-mag-glass">
         <i class="fas fa-search"></i>

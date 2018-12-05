@@ -1,12 +1,12 @@
 <% if current_user %>
-  <% if current_user.favorites.empty? %>
+  <% if @current_favorites.empty? %>
     <%= render 'components/favorites_empty_signed_in' %>
   <% else %>
     <div id="progress-wrapper">
-      <%= render 'components/visited_progress', favorites: current_user.favorites.count, visited: current_user.favorites.where(visited: true).count %>
+      <%= render 'components/visited_progress', favorites: @current_favorites.count, visited: @visited_favorites.count %>
     </div>
-    <% current_user.favorites.each do |favorite| %>
-      <%= render 'components/exhibitor_favorite_list', exhibitor: favorite.exhibitor %>
+    <% @current_favorites.each do |favorited_exhibitor| %>
+      <%= render 'components/exhibitor_favorite_list', exhibitor: favorited_exhibitor %>
     <% end %>
   <% end %>
 <% else %>
