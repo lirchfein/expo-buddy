@@ -1,0 +1,38 @@
+.devise-form {
+  margin-top: 80px;
+  padding: 50px 50px 0 50px;
+  h1 {
+    margin-bottom: 30px;
+  }
+  color: $primary-dark;
+}
+
+.center-single-flex {
+  display: flex;
+  justify-content: center;
+  a {
+    &:hover {
+      text-decoration: none;
+      color: $brand-green;
+    }
+  }
+}
+
+.basic-link {
+  text-decoration: none;
+  color: $primary-dark;
+  &:hover {
+      text-decoration: none;
+      color: $brand-green;
+  }
+}
+
+.small-margin-top-bottom {
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.small-font-p {
+  font-size: 15px;
+}
+
