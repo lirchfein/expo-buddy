@@ -13,6 +13,7 @@
                   <div class="sidebar-header">
                       <%= cl_image_tag(current_user.avatar, width: 100, height: 100, radius: "max", crop: :thumb, gravity: :face) %>
                       <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+                      <%= link_to "Edit Profile", edit_user_registration_path %>
                   </div>
                   <div class="sidebar-container">
                     <%= render 'components/sidebar_list' %>
