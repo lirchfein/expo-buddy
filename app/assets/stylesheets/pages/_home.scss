@@ -262,3 +262,9 @@
     justify-content: space-around;
   }
 }
+
+@-moz-document url-prefix() {
+    #phone-pic-mobile {
+      min-width: 150px;
+    }
+}
