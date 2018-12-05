@@ -1,7 +1,15 @@
 function toggleBookmark() {
+  // toggling the icon
   html = '<%= j render "components/bookmark", expo: @expo %>'
   const bookmark_container = document.getElementById('<%="expo_#{@expo.id}"%>');
   bookmark_container.innerHTML = html
+
+  // updating sidebar
+  const sidebar_html = '<%= j render "components/sidebar_list" %>'
+  const sidebar_container = document.querySelector('.sidebar-container');
+  sidebar_container.innerHTML = sidebar_html
+
+  //flash message update
   if ('<%= @flash_message %>' !== 'false') {
     console.log('helloooooooo')
     $('.flash-message').fadeIn(400);
@@ -9,6 +17,7 @@ function toggleBookmark() {
     document.querySelector('.flash-message').insertAdjacentHTML( 'beforeend', '<i class="fas fa-bars shadowless" id="blue-burger"></i>' )
     document.querySelector('.flash-message p').style.cssText = 'padding-right: 30px;';
     $('.flash-message').delay(1700).fadeOut(500);
+
   }
 }
 
