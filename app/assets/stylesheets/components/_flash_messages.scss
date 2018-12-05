@@ -5,19 +5,22 @@
   bottom: 0px;
   z-index: 3;
   background-color: #50E3C2;
-  border-radius: 10px 10px 0px 0px;
-  // transition: opacity 0.5s ease-in-out;
   .flash-message {
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    // opacity: 0;
-    // transition: all 5s ease-in-out;
   }
   p {
     opacity: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
     margin: 0;
-    // transition: all 5s ease-in-out;
+  }
+  i{
+    margin: 0px;
+    padding-right: 15px;
   }
 }
