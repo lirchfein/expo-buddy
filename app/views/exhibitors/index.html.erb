@@ -1,7 +1,7 @@
 <%= render 'components/expo_banner', expo: @expo %>
 <div class="other-page-content">
   <%= render 'components/expo-tabs' %>
-  <div class="exhibitor-item-render exhibitor-list toggle-visibility">
+  <div class="exhibitor-item-render exhibitor-list <%= 'toggle-visibility' unless @current_favorites.empty? %>">
     <div class="search light-paragraph">
       <%= form_tag expo_exhibitors_path(@expo), method: :get, remote: true do %>
       <%= text_field_tag :query,
@@ -17,7 +17,7 @@
     </div>
   </div>
 
-  <div class="exhibitor-item-render favorite-list ">
+  <div class="exhibitor-item-render favorite-list <%= 'toggle-visibility' if @current_favorites.empty? %>">
     <%= render 'components/user_favorites_render' %>
   </div>
 </div>
