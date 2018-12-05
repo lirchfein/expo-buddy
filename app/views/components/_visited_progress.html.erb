@@ -2,10 +2,8 @@
   <% if visited == favorites %>
     <h3>Great! You have visited all exhibitors!</h3>
   <% else %>
-    <h3><%= visited %> / <%= favorites %> <% favorites == 1 ? %>
-
-    <% end %>exhibitors visited</h3>
-  <%= end %>
+    <h3><%= visited %> / <%= favorites %> visited</h3>
+  <% end %>
   <div class="progress-background">
     <div class="progress-green" style="width: <%= progress %>%"></div>
   </div>
