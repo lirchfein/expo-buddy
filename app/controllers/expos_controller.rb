@@ -14,7 +14,7 @@ class ExposController < ApplicationController
       @flash_message = false
     else
       Bookmark.create(expo_id: @expo.id, user_id: current_user.id)
-      @flash_message = "You bookmarked #{@expo.name}, find it in you Sidebar!"
+      @flash_message = "You bookmarked #{@expo.name}, find it in your Sidebar!"
     end
     respond_to do |format|
       format.html { redirect_to expos_path }
