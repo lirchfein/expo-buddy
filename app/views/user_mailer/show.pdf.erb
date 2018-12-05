@@ -19,3 +19,10 @@
   <p>Klick here to download your pictures for <%= @exhibitor.name %>: <a href='<%="#{zip_link}"%>'>Zip-File</a></p>
 
 <h3>MEMOS</h3>
+<br>
+<div>
+  <% @notes.each do |note| %>
+    <%= render 'components/memo', note: note %>
+  <% end %>
+</div>
+

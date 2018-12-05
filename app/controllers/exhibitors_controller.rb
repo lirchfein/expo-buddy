@@ -35,10 +35,11 @@ class ExhibitorsController < ApplicationController
   def send_data
     @user = current_user
     @exhibitor = Exhibitor.find(params[:id])
+    @notes = user_notes.reverse!
     # @pictures = user_pictures.reverse!
     # pdf = render_to_string('show.pdf.erb', layout: 'pdf', template: 'exhibitors/show')
-    UserMailer.export(@user.id, @exhibitor.id).deliver
-    redirect_to expo_exhibitors_path(@exhibitor)
+    UserMailer.export(@user.id, @exhibitor.id, @notes).deliver
+    redirect_to expo_exhibitor_path(@exhibitor)
     #flash[:notice] = 'Email has been sent!'
   end
 
