@@ -1,0 +1,7 @@
+function showNewNote() {
+  HTML = '<%= j render "components/memo", note: Note.all.last %>'
+  const noteDiv = document.getElementById('memo-block');
+  noteDiv.insertAdjacentHTML('afterbegin', HTML);
+}
+
+showNewNote();

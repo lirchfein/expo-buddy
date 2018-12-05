@@ -6,7 +6,10 @@ class NotesController < ApplicationController
     @note.user = current_user
     @note.exhibitor = @exhibitor
     @note.save
-    redirect_to expo_exhibitor_path(@expo, @exhibitor)
+    respond_to do |format|
+      format.html { redirect_to expo_exhibitor_path(@expo, @exhibitor) }
+      format.js # <-- will render `app/views/notes/create.js.erb`
+    end
   end
 
   private

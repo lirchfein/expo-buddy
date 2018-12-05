@@ -1,20 +1,32 @@
-function myteston() {
-    document.getElementById("overlay").style.display = "block";
+function clickToDisplayNote() {
+    const message = document.getElementById("note_message")
+    message.value = ""
+    const overlay_display = document.getElementById("overlay")
+    overlay_display.classList.remove('no-show')
 }
 
-function off() {
-    document.getElementById("overlay").style.display = "none";
+function clickToCloseNote() {
+    const overlay_display = document.getElementById("overlay")
+    overlay_display.classList.add('no-show')
 }
 
-// function clickOverlayButton() {
-//   const overlay_display = document.getElementById("button-photo-upload")
-//   //console.log(form_button_photo_upload);
-//   form_button_photo_upload.click()
-// }
-
-function addEventListenersToOverlayBtn() {
-  const overlay_button = document.getElementById('display-overlay')
-  overlay_button.addEventListener('click', myteston)
+function addEventListenersToDisplayNoteBtn() {
+  const add_note_button = document.getElementById('display-overlay')
+  add_note_button.addEventListener('click', clickToDisplayNote)
 }
 
-addEventListenersToOverlayBtn();
+function addEventListenersToCloseNoteBtn() {
+  const close_note_button = document.getElementById('btn-close')
+  close_note_button.addEventListener('click', clickToCloseNote)
+
+}
+
+function addEventListenersToCreateNoteBtn() {
+  const create_note_button = document.getElementById('btn-note')
+  create_note_button.addEventListener('click', clickToCloseNote)
+}
+
+addEventListenersToDisplayNoteBtn();
+addEventListenersToCloseNoteBtn();
+addEventListenersToCreateNoteBtn();
+

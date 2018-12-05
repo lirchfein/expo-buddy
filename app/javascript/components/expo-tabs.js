@@ -1,5 +1,3 @@
-
-
 function togglingVisibilityListItems(tab) {
   const exhibitorDiv = document.querySelector(".exhibitor-list")
   const favoriteDiv = document.querySelector(".favorite-list")

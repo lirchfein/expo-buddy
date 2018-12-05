@@ -1,12 +1,12 @@
 <div class="exhibitor-tabs" id="bottom">
 
   <div class="left exhibitor-tab <%= 'exhibitor-select' if @favorite %>">
-      <i <i class="fas fa-edit" style="font-size: 28px; color: $primary-dark;"></i>
-       <p>NOTES</p>
+      <i class="fas fa-sticky-note"></i>
+       <p class="remove-margin small-padding-left">NOTES</p>
   </div>
   <div class="right exhibitor-tab <%= 'exhibitor-select' unless @favorite %>">
-      <i class="fas fa-info-circle " style="font-size: 28px; color: $primary-dark;"></i>
-      <p>ABOUT</p>
+      <i class="fas fa-info-circle"></i>
+      <p class="remove-margin small-padding-left">ABOUT</p>
   </div>
 </div>
 

@@ -1,1 +1,112 @@
-<%= render 'components/landing-banner' %>
+<%#= render 'components/landing-banner' %>
+<div class="landing-wrapper">
+
+  <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543926067/expo-buddy/logos/foot-prints-top-left.svg", id:"foot-prints-top-left" %>
+
+  <div class="container">
+    <div class="margin-left-right">
+      <div class="landing-header-desktop">
+
+        <div class="landing-header-mobile button-text-container">
+          <div>
+            <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543929725/expo-buddy/logos/logo-png.png", id: "logo-img-head" %>
+          </div>
+          <div>
+            <h2 class="light-font" id="sub-headline">Organize all your expos and exhibitor information - in just one single app!</h2>
+          </div>
+          <div class="medium-margin-top-bottom">
+            <%= link_to "Let's go buddy!", expos_path, class: 'btn btn-blank padding-btn bold-font'  %>
+          </div>
+        </div>
+        <div>
+          <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543918679/expo-buddy/logos/phone_img.svg", id:"phone-pic-desktop" %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543926359/expo-buddy/logos/rectangle-first.svg", id:"rectangle-first" %>
+  </div>
+
+  <div class="container">
+    <div class="margin-left-right">
+      <div class="landing-header-desktop">
+
+        <div class="photo-flex-container negtativ-margin-top">
+          <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543918679/expo-buddy/logos/phone_img.svg", id:"phone-pic-mobile" %>
+          <h2 id="phone-text" class="light-font explanatory-text" >Find all relevant  expos and save  notes with the exhibitors that you visitited.</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div>
+    <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543927772/expo-buddy/logos/foot-prints-right-middle.svg", id:"foot-prints-right-middle" %>
+  </div>
+
+  <div class="">
+    <div>
+      <div>
+      <div>
+        <div class="info-flex">
+          <div class="large-margin-top column-flex">
+            <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543918679/expo-buddy/logos/ring_icon.svg"%>
+            <h2>One app to rule them all</h2>
+            <h2 class="explanatory-text light-font margin-subtext">
+              Browse through all relevant expos and exhibitors in consumer eletronics with just one single app.
+            </h2>
+          </div>
+          <div class="column-flex">
+            <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543918679/expo-buddy/logos/paper-plane-icon.svg"%>
+            <h2>No more paperwork</h2>
+            <h2 class="explanatory-text light-font margin-subtext">
+              Welcome to the 21st century: Take your notes digitally and save them with the respective exhibitors that you visitited.
+            </h2>
+          </div>
+          <div class="column-flex">
+            <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543918679/expo-buddy/logos/share-icon.svg"%>
+            <h2>Easy export of data</h2>
+            <h2 class="explanatory-text light-font margin-subtext">
+              Export all your notes from the app into a file and attach them to the CRM system of your choice.
+            </h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div>
+  <div>
+    <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543928803/expo-buddy/logos/foot-prints-left-bottom.svg", id:"foot-prints-left-bottom" %>
+  </div>
+  <div>
+    <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543926359/expo-buddy/logos/rectangle-second.svg", id:"rectangle-second" %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="margin-left-right">
+    <div class="landing-header-desktop">
+
+
+      <div class="button-text-container medium-margin-top-bottom" id="flex-row-desktop">
+        <div>
+          <h2 class="light-font text-centered">Make every expo visit a successfull and productive day, by taking notes with EXPObuddy!</h2>
+        </div>
+        <div class="medium-margin-top-bottom">
+          <%= link_to "Start browsing expos", expos_path, class: 'btn btn-blank padding-btn bold-font'%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="landing-footer-mobile">
+    <div>
+      <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543918423/expo-buddy/logos/logo_expo_buddy.svg", id: "logo-img-foot" %>
+    </div>
+    <div class="rectangle-thin"></div>
+  </div>

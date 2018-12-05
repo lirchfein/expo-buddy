@@ -145,8 +145,8 @@ a[data-toggle="collapse"] {
 .btn-blank {
   display: inline;
   width: 55%;
-  border-radius: 2px;
-  border: solid 0.5px $primary-dark;
+  border-radius: 4px;
+  border: solid 1px $primary-dark;
   &:hover {
     color: $white;
     background-color: $primary-dark;
