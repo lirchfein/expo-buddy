@@ -1,0 +1,12 @@
+<div class="no-show">
+  <div id="close-bar">
+    <div id="grid-close"><i class="fas fa-times"></i></div>
+  </div>
+  <div id="grid-container">
+    <% @pictures.each do |picture|%>
+      <div class="grid-pic">
+        <%= cl_image_tag(picture.pic, :width=>100, :height=>100, :gravity=>"east", :crop=>"fill") %>
+      </div>
+    <% end %>
+  </div>
+</div>

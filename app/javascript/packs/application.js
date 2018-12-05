@@ -21,3 +21,5 @@ addEventListenersToExhibitorTabs();
 
 import "actiontext";
 import "../../../node_modules/trix/dist/trix.css"
+
+// import "../../../node_modules/masonry-layout/masonry.js"
