@@ -7,6 +7,12 @@
   <div id="empty-div"></div>
   <div class="navbar-icons">
     <div class="favorite-cont">
+      <%= link_to send_data_exhibitor_path(@exhibitor) do %>
+        <%= cl_image_tag("https://res.cloudinary.com/dfcud6por/image/upload/v1544009747/expo-buddy/buttons/share-icon-white.svg",
+          width: 27, height: 25, crop: :fill) %>
+      <% end %>
+    </div>
+    <div class="favorite-cont">
     <%= render 'components/favorite', expo: @expo, exhibitor: @exhibitor %>
     </div>
     <div class="favorite-cont">

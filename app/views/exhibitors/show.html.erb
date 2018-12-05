@@ -22,6 +22,7 @@
         </div>
       </div>
     <% else %>
+  <%= link_to "Send PDF by email", send_data_exhibitor_path(@exhibitor) %>
       <div id="pictures-container">
           <%= render 'pictures_area' %>
       </div>
@@ -31,7 +32,6 @@
     <% end %>
   </div>
 
-  <%#= link_to "Send PDF by email", send_data_exhibitor_path(@exhibitor) %>
   <%= render 'components/exhibitor_tabs' %>
 </div>
 
