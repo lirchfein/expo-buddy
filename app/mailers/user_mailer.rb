@@ -4,10 +4,11 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.export.subject
   #
-  def export(user_id, exhibitor_id)
+  def export(user_id, exhibitor_id, notes)
     @user = User.find(user_id) # Instance variable => available in view
     @exhibitor = Exhibitor.find(exhibitor_id) # Instance variable => available in view
     @pictures = Picture.taken_by(@user).for_exhibitor(@exhibitor)
+    @notes = notes;
     attachments['attachment.pdf'] = WickedPdf.new.pdf_from_string(
       render_to_string('show.pdf.erb', layout: 'pdf')
     )

@@ -1,7 +1,14 @@
 function reRenderStar() {
   let favorite_containers = document.getElementById('<%= @exhibitor.id %>');
-  const html = '<%= j render "components/favorite", expo: @expo, exhibitor: @exhibitor %>'
+
+  if (document.querySelector('.fa-arrow-left') === null) {
+  let html = '<%= j render "components/favorite", favorite: @favorite, exhibitor: @exhibitor, fill_color: "#160C28"  %>';
   favorite_containers.innerHTML = html
+  }else {
+  let html = '<%= j render "components/favorite", favorite: @favorite, exhibitor: @exhibitor, fill_color: "white"  %>';
+  favorite_containers.innerHTML = html
+  }
+
   if ('<%= @flash_message %>' !== 'false') {
     $('.flash-message').fadeIn(400);
     $('.flash-message').html('<p><%= @flash_message %></p>');
@@ -10,4 +17,3 @@ function reRenderStar() {
 }
 
 reRenderStar()
-
