@@ -1,21 +1,20 @@
 .progress-background {
-  background-color: white;
-  height: 7px;
+  background-color: $gray-inactive;
   width: 100%;
-  border: 1px solid $gray-inactive;
-  margin-bottom: 15px;
+  //border: 1px solid $gray-inactive;
+  margin-bottom: 10px;
 }
 
 .progress-green {
   background-color: $green;
   height: 7px;
-}
-
-.progress-box {
+}#progress-wrapper {
   text-align: left;
   font-size: 20px;
   padding: 15px 0px;
   margin-top: 15px;
   width: 85%;
-
+  h3 {
+    margin-top: 0px;
+  }
 }

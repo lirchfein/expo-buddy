@@ -1,7 +1,12 @@
 function reRenderCheck() {
+  //footprint icon update
   let check_containers = document.getElementById('<%= @exhibitor.id %>a');
   const html = '<%= j render "components/visited", favorite: @favorite, exhibitor: @exhibitor %>'
   check_containers.innerHTML = html
+  //progress bar update
+  let progress_wrapper = document.getElementById('progress-wrapper');
+  const progress_html = '<%= j render "components/visited_progress", favorites: current_user.favorites.count, visited: current_user.favorites.where(visited: true).count %>'
+  progress_wrapper.innerHTML = progress_html
 }
 
 reRenderCheck()

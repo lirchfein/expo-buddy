@@ -1,7 +1,11 @@
 <% progress = visited * 100 / favorites %>
-<div class="progress-box">
-  <p><%= visited %> out of <%= favorites %> exhibitors visited</p>
+  <% if visited == favorites %>
+    <h3>Great! You have visited all exhibitors!</h3>
+  <% else %>
+    <h3><%= visited %> / <%= favorites %> <% favorites == 1 ? %>
+
+    <% end %>exhibitors visited</h3>
+  <%= end %>
   <div class="progress-background">
     <div class="progress-green" style="width: <%= progress %>%"></div>
   </div>
-</div>
