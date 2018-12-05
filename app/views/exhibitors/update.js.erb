@@ -12,7 +12,7 @@ function reRenderCheck() {
 
   //progress bar update
   let progress_wrapper = document.getElementById('progress-wrapper');
-  const progress_html = '<%= j render "components/visited_progress", favorites: current_user.favorites.count, visited: current_user.favorites.where(visited: true).count %>'
+  const progress_html = '<%= j render "components/visited_progress", favorites: @current_favorites.count, visited: @visited_favorites.count %>'
   if (progress_wrapper !== null) {
   progress_wrapper.innerHTML = progress_html
   }

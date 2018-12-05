@@ -2,6 +2,8 @@ class ExhibitorsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
   def index
     @expo = Expo.find(params[:expo_id])
+    @current_favorites = Favorite.get_expo(current_user, @expo)
+    @visited_favorites = Favorite.visited_exhibitors(current_user, @current_favorites)
     if params[:query].present?
       @exhibitors = @expo.exhibitors.order_by_name.search_by_name_and_description(params[:query]).page(params[:page])
     else
@@ -62,6 +64,7 @@ class ExhibitorsController < ApplicationController
 
   def update
     @exhibitor = Exhibitor.find(params[:id])
+    @expo = @exhibitor.expo
     @favorite = current_user.favorites.find_by(exhibitor_id: @exhibitor.id)
     if @favorite.visited == true
       @favorite.visited = false
@@ -71,6 +74,8 @@ class ExhibitorsController < ApplicationController
       @flash_message = "Marked #{@exhibitor.name} as visited!"
     end
     if @favorite.save
+    @current_favorites = Favorite.get_expo(current_user, @expo)
+    @visited_favorites = Favorite.visited_exhibitors(current_user, @current_favorites)
       respond_to do |format|
         format.html { redirect_to expo_exhibitors_path(@exhibitor.expo) }
         format.js # <-- will render `app/views/exhibitors/update.js.erb`
@@ -81,8 +86,12 @@ class ExhibitorsController < ApplicationController
   end
 
   def favorites_tab
+    @expo = Expo.find(params[:expo])
+    @current_favorites = Favorite.get_expo(current_user, @expo)
+    @current_favorites = Favorite.get_expo(current_user, @expo)
+    @visited_favorites = Favorite.visited_exhibitors(current_user, @current_favorites)
     respond_to do |format|
-      format.html { redirect_to expo_exhibitors_path(@exhibitor.expo) }
+      format.html { redirect_to expo_exhibitors_path(@expo) }
       format.js # <-- will render `app/views/exhibitors/favorites_tab.js.erb`
     end
   end
