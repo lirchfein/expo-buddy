@@ -3,16 +3,16 @@
     <% if current_user %>
       <% favorite = current_user.favorites.find_by(exhibitor_id: exhibitor.id) %>
       <% if favorite%>
-        <i class="fas fa-star"></i>
+        <i class="fas fa-star" style= 'color: <%= fill_color %>;'></i>
       <% else %>
-       <i class="far fa-star"></i>
+       <i class="far fa-star" style= 'color: <%= fill_color %>;'></i>
       <% end %>
     <% else %>
-      <i class="far fa-star"></i>
+      <i class="far fa-star" style= 'color: <%= fill_color %>;'></i>
     <% end %>
   <% end %>
 <% else %>
   <%= link_to new_user_session_path do %>
-    <i class="far fa-star"></i>
+    <i class="far fa-star" style= 'color: <%= fill_color %>;'></i>
   <% end %>
 <% end %>
