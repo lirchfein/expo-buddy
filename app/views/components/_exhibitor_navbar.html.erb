@@ -1,18 +1,17 @@
 <div class="navbar">
   <div class="navbar-icons">
-    <%= link_to expo_exhibitors_path(@expo) do %>
-    <i class="fas fa-arrow-left"></i>
+    <%= link_to expo_exhibitors_path(@expo), class:"white-icons" do %>
+      <i class="fas fa-arrow-left"></i>
     <% end %>
   </div>
   <div id="empty-div"></div>
   <div class="navbar-icons">
     <div class="favorite-cont">
-      <%= link_to send_data_exhibitor_path(@exhibitor) do %>
-        <%= cl_image_tag("https://res.cloudinary.com/dfcud6por/image/upload/v1544009747/expo-buddy/buttons/share-icon-white.svg",
-          width: 27, height: 25, crop: :fill) %>
+      <%= link_to send_data_exhibitor_path(@exhibitor), class:"white-icons" do %>
+        <i class="fas fa-share-alt"></i>
       <% end %>
     </div>
-    <div class="favorite-cont">
+    <div class="favorite-cont white-icons">
     <%= render 'components/favorite', expo: @expo, exhibitor: @exhibitor, fill_color: 'white' %>
     </div>
     <div class="favorite-cont" id= '<%="#{@exhibitor.id}a"%>'>

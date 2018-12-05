@@ -1,5 +1,5 @@
 .progress-background {
-  background-color: $gray-inactive;
+  background-color: rgba(23, 184, 144, 0.2);
   width: 100%;
   //border: 1px solid $gray-inactive;
   margin-bottom: 10px;
@@ -11,10 +11,11 @@
 }#progress-wrapper {
   text-align: left;
   font-size: 20px;
-  padding: 15px 0px;
+  padding: 15px 0px 0px;
   margin-top: 15px;
   width: 85%;
-  h3 {
+  p {
     margin-top: 0px;
+    margin-bottom: 5px;
   }
 }
