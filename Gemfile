@@ -29,7 +29,8 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 # Search
 gem 'pg_search'
-# auth
+
+gem 'postmark-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
