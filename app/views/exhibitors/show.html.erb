@@ -4,10 +4,10 @@
 
 
   <div class="exhibitor-description <%= 'no-show' if @favorite %>">
-    <p class="blocks">Location :</p>
-    <p class="blocks"><%=  @exhibitor.location %></p>
-    <p class="blocks">Descritpion :</p>
-    <p class="blocks"><%= @exhibitor.description %></p>
+    <h3>LOCATION</h3>
+    <p ><%=  @exhibitor.location %></p>
+    <h3>DESCRIPTION</h3>
+    <p ><%= @exhibitor.description %></p>
   </div>
 
 
@@ -22,16 +22,17 @@
         </div>
       </div>
     <% else %>
-      <%= render 'pictures_area' %>
-      <div>
-        <%= render 'notes_area', note: @note %>
+      <div id="pictures-container">
+          <%= render 'pictures_area' %>
+      </div>
+      <div id="memos-container">
+          <%= render 'notes_area', note: @note %>
       </div>
     <% end %>
   </div>
 
-  <%= link_to "Send PDF by email", send_data_exhibitor_path(@exhibitor) %>
+  <%#= link_to "Send PDF by email", send_data_exhibitor_path(@exhibitor) %>
   <%= render 'components/exhibitor_tabs' %>
-  <%# end %>
 </div>
 
 
