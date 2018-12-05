@@ -31,6 +31,11 @@ body {
   .bold-header {
     font-weight: 700;
   }
+
+  // to be removed after demo on projector
+  .bold-btn-border {
+    border: solid 2px $primary-dark;
+  }
 }
 
 
