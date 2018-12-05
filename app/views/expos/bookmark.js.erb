@@ -8,7 +8,7 @@ function toggleBookmark() {
     $('.flash-message').html('<p><%= @flash_message %></p>');
     document.querySelector('.flash-message').insertAdjacentHTML( 'beforeend', '<i class="fas fa-bars shadowless" id="blue-burger"></i>' )
     document.querySelector('.flash-message p').style.cssText = 'padding-right: 10px;';
-    // $('.flash-message').delay(1200).fadeOut(500);
+    $('.flash-message').delay(1200).fadeOut(500);
   }
 }
 
