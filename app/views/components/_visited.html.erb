@@ -1,10 +1,10 @@
-<%= link_to exhibitor_update_path(exhibitor), id: "#{exhibitor.id}a", remote: true do  %>
+<%= link_to exhibitor_update_path(exhibitor), remote: true do  %>
   <% if favorite.nil? %>
   <% elsif favorite.visited %>
-    <%= cl_image_tag("expo-buddy/buttons/foot-prints-full.svg",
+    <%= cl_image_tag("expo-buddy/logos/big-foot-prints-full-green-blue.svg",
       width: 27, height: 25, crop: :fill) %>
     <% else %>
-    <%= cl_image_tag("expo-buddy/buttons/foot-prints-empty.svg",
+    <%= cl_image_tag("expo-buddy/logos/big-foot-prints-empty.svg",
       width: 27, height: 25, crop: :fill) %>
   <% end %>
 <% end %>

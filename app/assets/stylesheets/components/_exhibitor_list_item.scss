@@ -24,11 +24,13 @@
 .exhibitor-list-item {
   justify-content: space-between;
   display: flex;
+  color: $primary-dark;
   height: 85px;
   width: 85%;
   align-items: center;
   text-align: center;
-  border-bottom: 1px solid $gray-inactive;
+  border-bottom: solid 1px;
+  border-color: rgba(201, 201, 201, 1);
 
   a{
     color: inherit;

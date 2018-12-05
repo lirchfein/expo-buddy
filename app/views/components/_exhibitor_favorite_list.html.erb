@@ -15,7 +15,7 @@
     </div>
 
   <% end %>
-  <div class="favorite-cont">
+  <div class="favorite-cont" id= '<%="#{exhibitor.id}a"%>'>
     <%= render 'components/visited', favorite: current_user.favorites.find_by(exhibitor_id: exhibitor.id), exhibitor: exhibitor %>
   </div>
 </div>

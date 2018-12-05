@@ -1,6 +1,6 @@
 <%= render 'components/expo_banner', expo: @expo %>
-<%= render 'components/expo-tabs' %>
 <div class="other-page-content">
+  <%= render 'components/expo-tabs' %>
   <div class="exhibitor-item-render exhibitor-list toggle-visibility">
     <div class="search light-paragraph">
       <%= form_tag expo_exhibitors_path(@expo), method: :get, remote: true do %>
@@ -21,6 +21,9 @@
     <%= render 'components/user_favorites_render' %>
   </div>
 </div>
-
+<div class="flash-message-box">
+  <div class="flash-message">
+  </div>
+</div>
 
 <%= javascript_pack_tag 'infinite_scroll' %>

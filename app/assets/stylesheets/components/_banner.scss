@@ -2,6 +2,7 @@
   height: 230px;
   background-size: cover !important;
   position: relative;
+  color: $primary-dark;
   // position: sticky;
   // top: 0;
   // z-index: 2;
@@ -9,6 +10,7 @@
 
 .exhibitor-header-white-box {
   background: white;
+  color: $primary-dark;
   width: auto;
   display: inline-block;
   padding: 3px 11px;

@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="memos-box">
+        <p class="memo-creation-date">
+          <%= note.created_at.strftime('%a, %d %b %Y -%l:%M %p') %>
+        </p>
+        <div class="light-font">
+          <%= note.message.html_safe %>
+        </div>
+    </div>
+  </div>
+</div>

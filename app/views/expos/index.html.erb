@@ -4,9 +4,13 @@
 <div class="card-container">
   <div class="row">
     <% @expos.each do |expo| %>
-      <div class="col-xs-12 col-md-6 col-lg-4">
+      <div class="col-xs-12 col-sm-6 col-lg-4">
         <%= render 'components/card', expo: expo %>
       </div>
     <% end %>
+  </div>
+</div>
+<div class="flash-message-box">
+  <div class="flash-message">
   </div>
 </div>
