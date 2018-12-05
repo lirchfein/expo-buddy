@@ -9,7 +9,7 @@
     <div class="favorite-cont">
     <%= render 'components/favorite', expo: @expo, exhibitor: @exhibitor %>
     </div>
-    <div class="favorite-cont">
+    <div class="favorite-cont" id= '<%="#{@exhibitor.id}a"%>'>
     <%= render 'components/visited', favorite: current_user.favorites.find_by(exhibitor_id: @exhibitor.id), exhibitor: @exhibitor if current_user != nil %>
   </div>
   </div>
