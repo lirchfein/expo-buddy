@@ -16,6 +16,17 @@
     transition: 0.8s ease;
 }
 
+.inline-block-element-heading {
+  display: inline-block;
+}
+
+#pen-color {
+  p {
+    font-size: 14px;
+    display: inline-block;
+  }
+}
+
 .relative-container {
   position: relative;
   height: 100vh;
