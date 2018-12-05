@@ -1,0 +1,18 @@
+.grid-item {
+  border: solid;
+}
+.grid-item--width1 { width: 50%; }
+.grid-item--width2 { width: 20%; }
+
+.grid {
+  background: #EEE;
+  max-width: 1200px;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
