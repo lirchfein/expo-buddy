@@ -29,6 +29,7 @@
 }
 
 .exhibitor-tabs {
+  color: $gray-inactive;
   border-top: solid 0.5px #EEEEEE;
   display: flex;
   width: 100%;
@@ -45,7 +46,7 @@
     align-items: center;
     text-align: center;
     margin: 0;
-    color: $primary-dark;
+    color: inherit;
     &:hover{
       text-decoration: none;
     }
@@ -92,7 +93,7 @@
 }
 
 .exhibitor-select {
-  opacity: 1;
+  color: $primary-dark;
 }
 
 .favorite-star {

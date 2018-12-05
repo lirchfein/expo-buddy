@@ -27,7 +27,7 @@
         </div>
       </div>
     <% else %>
-  <%= link_to "Send PDF by email", send_data_exhibitor_path(@exhibitor) %>
+
       <div id="pictures-container">
           <%= render 'pictures_area' %>
       </div>
@@ -39,7 +39,10 @@
 
   <%= render 'components/exhibitor_tabs' %>
 </div>
-
+<div class="flash-message-box">
+  <div class="flash-message">
+  </div>
+</div>
 
 <%= content_for :after_js do %>
   <%= javascript_pack_tag "picture_upload" %>

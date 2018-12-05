@@ -7,6 +7,7 @@ class Exhibitor < ApplicationRecord
 
 
   scope :order_by_name, -> { order('LOWER(name) ASC') }
+  scope :order_by_name, -> { order('LOWER(name) ASC') }
 
   include PgSearch
   pg_search_scope :search_by_name_and_description, against: {
