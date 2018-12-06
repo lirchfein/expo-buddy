@@ -67,3 +67,29 @@
   margin: 0 8vw;
 }
 
+// EMAIL CARD
+
+#email-card{
+  border: $gray-inactive;
+  border-width: 1.5px;
+  border-style: dashed;
+  box-shadow: 0px 0px 2px 0px #888888;
+  display: flex;
+}
+
+.card-email-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  p{
+    color: $gray-inactive;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 10px;
+  }
+}
+#coorporate-email{
+  color: $primary-dark;
+}
