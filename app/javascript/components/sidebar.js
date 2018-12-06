@@ -11,7 +11,6 @@ $(document).ready(function () {
         });
 
         $('#sidebarCollapse').on('click', function () {
-          console.log("toggle!")
             // open sidebar
             $('#sidebar').addClass('active');
             // fade in the overlay

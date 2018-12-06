@@ -13,7 +13,11 @@
       <%= form_with(model: note, url: [@exhibitor, note], remote: true) do |form| %>
         <div class="field">
           <%= form.rich_text_area :message %>
-          <%= form.submit 'Create note', id: 'btn-note'%>
+          <div id="btn-container">
+            <div class="center-btn"></div>
+              <%= form.submit 'Create note', id: 'btn-note'%>
+            <div class="center-btn"></div>
+          </div>
         </div>
       <% end %>
     </div>

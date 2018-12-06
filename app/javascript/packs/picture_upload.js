@@ -9,12 +9,13 @@ function clickPhotoSubmitButton() {
 
 function addEventListenersToPhotoForm() {
   const photo_form = document.getElementById('new_picture')
-  photo_form.addEventListener('change', clickPhotoSubmitButton)
+  if (photo_form) {
+    photo_form.addEventListener('change', clickPhotoSubmitButton)
+  }
 }
 
 function clickPhotoUploadButton() {
   const form_button_photo_upload = document.getElementById("button-photo-upload")
-  //console.log(form_button_photo_upload);
   form_button_photo_upload.click()
 }
 

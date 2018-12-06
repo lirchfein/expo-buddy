@@ -21,7 +21,7 @@
         <%= f.input :password_confirmation,
                     required: true,
                     input_html: { autocomplete: "new-password" } %>
-        <%= f.input :avatar %>
+        <%= f.input :avatar, input_html: { value: "https://res.cloudinary.com/dfcud6por/image/upload/v1544110766/expo-buddy/buttons/placeholder_avatar.png"}%>
         <%= f.input :avatar_cache, as: :hidden %>
       </div>
 

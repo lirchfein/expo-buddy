@@ -1,0 +1,54 @@
+.member-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 3%;
+}
+
+.name-line {
+  width: 100px;
+  margin-bottom: 5px;
+}
+
+.flex-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  h3 {
+    margin: 0 0 10px;
+  }
+}
+
+.first-pic-row-about {
+  margin-bottom: 15px;
+}
+
+.md-margin-top {
+  margin-top: 50px;
+}
+
+.max-width-wrapper-about {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.left-align {
+  text-align: left;
+  //margin-left: 20px;
+}
+
+.right-align {
+  text-align: right;
+  //margin-right: 20px;
+}
+
+.flex-wrapper-about {
+  display: flex;
+  flex-direction: column;
+}
+
+.overall-flex {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
