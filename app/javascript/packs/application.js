@@ -9,7 +9,6 @@
 window.jQuery = window.$ = require('jquery');
 
 import "bootstrap";
-// console.log('Hello World from Webpacker')
 import { addEventListenersToExpoTabs } from '../components/expo-tabs.js';
 addEventListenersToExpoTabs();
 

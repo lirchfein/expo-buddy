@@ -16,7 +16,6 @@ function addEventListenersToPhotoForm() {
 
 function clickPhotoUploadButton() {
   const form_button_photo_upload = document.getElementById("button-photo-upload")
-  //console.log(form_button_photo_upload);
   form_button_photo_upload.click()
 }
 
