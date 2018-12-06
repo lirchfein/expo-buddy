@@ -28,7 +28,8 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
-       Please confirm the export of all notes collected for acer. A PDF will be send to your account’s email address: <%= current_user.email %>
+        <p>Please confirm the export of all notes collected for <%= @exhibitor.name %>. A PDF will be send to your account’s email address:</p>
+        <p id= 'user-email-p'><%= current_user.email %></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-blank cancel-button" data-dismiss="modal">Cancel</button>
@@ -37,29 +38,3 @@
     </div>
   </div>
 </div>
-
-<style>
-  .modal-footer {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .cancel-button {
-    width: 100px;
-    background-color: white;
-    border-color: #C9C9C9;
-    color: #C9C9C9;
-  }
-  .confirm-button {
-    width: 100px;
-    background-color: white;
-    border-color: #160C28;
-  }
-  .cancel-button:hover {
-    background-color: #C9C9C9;
-
-  }
-  .confirm-button:hover{
-    background-color: #160C28;
-  }
-</style>
