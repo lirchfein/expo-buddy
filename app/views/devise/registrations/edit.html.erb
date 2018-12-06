@@ -1,43 +1,44 @@
-<%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543926067/expo-buddy/logos/foot-prints-top-left.svg", id:"foot-prints-top-left"  %>
+<div class="max-width-wrapper">
+  <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1543926067/expo-buddy/logos/foot-prints-top-left.svg", id:"foot-prints-top-left"  %>
 
-<div class="devise-form">
-  <h1>Edit <%= resource_name.to_s.humanize %></h1>
+  <div class="devise-form">
+    <h1>Edit <%= resource_name.to_s.humanize %></h1>
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= f.error_notification %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= f.error_notification %>
 
-    <div class="form-inputs">
-      <%= f.input :first_name %>
-      <%= f.input :last_name %>
-      <%= f.input :email, required: true, autofocus: true %>
-      <%= f.input :avatar %>
-      <%= f.input :avatar_cache, as: :hidden %>
+      <div class="form-inputs">
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :email, required: true, autofocus: true %>
+        <%= f.input :avatar %>
+        <%= f.input :avatar_cache, as: :hidden %>
 
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-      <% end %>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+        <% end %>
 
-      <%= f.input :password,
-                  hint: "leave it blank if you don't want to change it",
-                  required: false,
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: false,
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :current_password,
-                  hint: "we need your current password to confirm your changes",
-                  required: true,
-                  input_html: { autocomplete: "current-password" } %>
+        <%= f.input :password,
+                    hint: "leave it blank if you don't want to change it",
+                    required: false,
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation,
+                    required: false,
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :current_password,
+                    hint: "we need your current password to confirm your changes",
+                    required: true,
+                    input_html: { autocomplete: "current-password" } %>
+      </div>
+
+      <div class="form-actions center-single-flex md-margin-top-bottom">
+        <%= f.button :submit, "Update", :class => "btn btn-blank"  %>
+      </div>
+    <% end %>
+    <div class="center-single-flex">
+      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:'basic-link' %></p>
     </div>
-
-    <div class="form-actions center-single-flex small-margin-top-bottom">
-      <%= f.button :submit, "Update", :class => "btn btn-blank"  %>
-    </div>
-  <% end %>
-  <div class="center-single-flex">
-    <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:'basic-link' %></p>
   </div>
-
 </div>
 <div class="landing-footer-mobile">
   <div class="rectangle-thin"></div>
