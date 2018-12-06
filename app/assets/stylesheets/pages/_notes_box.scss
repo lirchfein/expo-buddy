@@ -13,10 +13,10 @@
 
 #overlay-box{
     position: absolute;
-    top: 53%;
+    top: 51%;
     left: 50%;
     background: white;
-    height: 50%;
+    height: 45%;
     width: 90%;
     transform: translate(-50%,-50%);
     display: flex;
@@ -24,6 +24,8 @@
     padding-top: 10px;
     padding-right: 10px;
     border-radius: 5px;
+    border: solid;
+    border-color: $brand-green;
     // -ms-transform: translate(-50%,-50%);
     form {
       width: 100%;
@@ -36,9 +38,11 @@
 }
 
 #note_message {
-  height: 14em;
-  max-height: 14em;
+  // height: 14em;
+  // max-height: 14em;
   overflow: auto;
+  flex-grow: 16;
+  width: 110%;
 }
 
 #btn-close {
@@ -50,8 +54,26 @@
   z-index: 2;
 }
 
+#btn-container {
+  display: flex;
+  align-items: center;
+  width: 110%;
+}
+
+.center-btn {
+  flex-grow: 1;
+}
+
 #btn-note {
-  width: 100%;
+  width: 50%;
+  background-color: #73F7D4;
+  margin-top: 10px;
+  border-radius: 5px;
+  // height: 29%;
+  color: #4c4b4b;
+  font-weight: 800;
+  justify-self: center;
+  flex-grow: 2;
 }
 
 .memos-box {
@@ -61,6 +83,15 @@
   padding: 0.9em;
   border-radius: 5px;
   overflow-wrap: break-word;
+}
+
+.field {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 98%;
+  width: 90%;
+
 }
 
 #trix-toolbar-1 {
