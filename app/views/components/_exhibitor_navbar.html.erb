@@ -31,7 +31,9 @@
     <div class="modal-content">
       <div class="modal-body">
         <p>Please confirm the export of all notes collected for <%= @exhibitor.name %>. A PDF will be send to your account’s email address:</p>
-        <p id= 'user-email-p'><%= current_user.email if current_user%></p>
+        <div class="email-div">
+          <p id= 'user-email-p'><%= current_user.email if current_user%></p>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-blank cancel-button" data-dismiss="modal">Cancel</button>
