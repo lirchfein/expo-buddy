@@ -1,6 +1,10 @@
 function clickPhotoSubmitButton() {
   const button_submit = document.querySelector(".button-submit")
-  button_submit.click()
+  button_submit.click();
+  // show spinning circle
+  const pic_loading = '<div class="picture-loader"><h3>PICTURES</h3><img src="https://res.cloudinary.com/dfcud6por/image/upload/v1543849474/ajax-loader.gif"/></div>'
+  const pics_title_wrapper = document.querySelector('.picture-title');
+  pics_title_wrapper.innerHTML = pic_loading
 }
 
 function addEventListenersToPhotoForm() {
