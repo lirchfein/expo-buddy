@@ -64,10 +64,11 @@
     color: $primary-dark;
     font-weight: 300;
   }
-  h2:hover, h2:active, h2:visited, h2:focus {
-    text-decoration: underline;
-    text-decoration-color: $primary-dark;
-    font-weight:800;
+  &:hover{
+    text-decoration: none;
+  }
+  h2:hover{
+     color: white;
   }
 }
 
@@ -79,6 +80,9 @@
   h2 {
   font-size : 26px;
   font-weight: 300;
+  }
+  img{
+    border-radius: 50%;
   }
 }
 
