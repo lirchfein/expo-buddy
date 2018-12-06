@@ -21,8 +21,9 @@
     <% if current_user.nil? %>
       <div class= "empty-box">
         <div class="exhibitor-item" style="margin-right: 5%;">
-          <div class="exhibitor-info">
-            <h2>Please Sign in to add to see your Pictures !</h2>
+          <div class="exhibitor-info" id='sign_in_button'>
+              <h2>Please log in to add and view your notes!</h2>
+              <%= link_to("Log in here", new_user_session_path,  class: "btn btn-blank") %>
           </div>
         </div>
       </div>
