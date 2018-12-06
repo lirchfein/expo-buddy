@@ -9,7 +9,9 @@ function clickPhotoSubmitButton() {
 
 function addEventListenersToPhotoForm() {
   const photo_form = document.getElementById('new_picture')
-  photo_form.addEventListener('change', clickPhotoSubmitButton)
+  if (photo_form) {
+    photo_form.addEventListener('change', clickPhotoSubmitButton)
+  }
 }
 
 function clickPhotoUploadButton() {

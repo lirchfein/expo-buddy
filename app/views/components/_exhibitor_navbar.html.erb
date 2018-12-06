@@ -8,10 +8,12 @@
   <div class="navbar-icons">
     <div class="favorite-cont">
       <div class="white-icons">
-      <%# link_to send_data_exhibitor_path(@exhibitor), class:"white-icons" do %>
-        <i class="fas fa-share-alt white-icons" <%= 'data-toggle=modal data-target=#exampleModal' if current_user%>></i>
+        <%# link_to send_data_exhibitor_path(@exhibitor), class:"white-icons" do %>
+        <button id= 'modal-button-email' <%= 'data-toggle=modal data-target=#exampleModal' if current_user%>>
+          <i class="fas fa-share-alt white-icons"></i>
+        </button>
         <%# end %>
-        </div>
+      </div>
     </div>
     <div class="favorite-cont white-icons">
     <%= render 'components/favorite', expo: @expo, exhibitor: @exhibitor, fill_color: 'white' %>

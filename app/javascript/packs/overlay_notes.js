@@ -17,13 +17,16 @@ function addEventListenersToDisplayNoteBtn() {
 
 function addEventListenersToCloseNoteBtn() {
   const close_note_button = document.getElementById('btn-close')
-  close_note_button.addEventListener('click', clickToCloseNote)
-
+  if (close_note_button) {
+    close_note_button.addEventListener('click', clickToCloseNote)
+  }
 }
 
 function addEventListenersToCreateNoteBtn() {
   const create_note_button = document.getElementById('btn-note')
+  if (create_note_button) {
   create_note_button.addEventListener('click', clickToCloseNote)
+  }
 }
 
 addEventListenersToDisplayNoteBtn();
