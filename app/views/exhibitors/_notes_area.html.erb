@@ -22,10 +22,19 @@
 <!-- The notes block -->
 <div class="row">
   <div class="col-xs-12">
-    <div id="display-overlay" class ="memos-box flex-align-single-item">
-      <!-- <h3 class="light-font remove-margin"><i class="fas fa-plus"></i> Add memo</h3> -->
-     <%= cl_image_tag('https://res.cloudinary.com/dfcud6por/image/upload/c_mpad,h_100,w_100/v1543412664/noun_Plus_341859.png', :width=>50, :height=>50, :crop=>"fill") %>
+
+    <div class= 'user_memos_error <%= 'no-show' unless Note.written_by(current_user).for_exhibitor(@exhibitor).empty? %>'>
+      <div class="no-memos">
+        <p>Click</p>
+        <div class="photo-icon-div">
+          <i class="fas fa-plus-circle"></i>
+        </div>
+        <p>to add Memos!</p>
+      </div>
     </div>
+<!--     <div id="display-overlay" class ="memos-box flex-align-single-item">
+      <h3 class="light-font remove-margin"><i class="fas fa-plus"></i> Add memo</h3>
+    </div> -->
   </div>
 </div>
 

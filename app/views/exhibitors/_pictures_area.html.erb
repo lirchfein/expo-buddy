@@ -11,9 +11,20 @@
     <% end %>
   </div>
     <div class="user-pic-flexbox">
+
+      <div class= 'user_photos_error <%= 'no-show' unless Picture.taken_by(current_user).for_exhibitor(@exhibitor).empty? %>'>
+        <div class="no-favorites">
+          <p>Click</p>
+          <div class="photo-icon-div">
+            <i class="fas fa-plus-circle"></i>
+          </div>
+          <p>to add Pictures!</p>
+        </div>
+      </div>
+
       <div id="add-icon" class ="user-pic-thumnail">
         <!-- <h3 class="light-font remove-margin"><i class="fas fa-plus"></i> Add pic</h3> -->
-        <%= cl_image_tag('https://res.cloudinary.com/dfcud6por/image/upload/c_mpad,h_100,w_100/v1543412664/noun_Plus_341859.png', :width=>100, :height=>100, :crop=>"mpad") %>
+        <%# cl_image_tag('https://res.cloudinary.com/dfcud6por/image/upload/c_mpad,h_100,w_100/v1543412664/noun_Plus_341859.png', :width=>100, :height=>100, :crop=>"mpad") %>
       </div>
       <% @pictures.each do |picture|%>
         <%= render "components/thumnail_pic", pic: picture.pic %>

@@ -40,8 +40,19 @@
 
   <%= render 'components/exhibitor_tabs' %>
 </div>
+
 <div class="flash-message-box">
   <div class="flash-message">
+  </div>
+</div>
+
+<div class="fixed-action-btn <%= 'no-show' unless @favorite %>" >
+  <div>
+    <div class='options-button' id="photo-upload"><i class="fas fa-camera"></i></div>
+    <div class='options-button' id='add-notey' ><i class="fas fa-edit"></i></div>
+  </div>
+  <div class="main-floating-button" id= 'clicky-button'>
+    <i class="fas fa-plus"></i>
   </div>
 </div>
 
