@@ -1,9 +1,17 @@
 function addPicture() {
+
+  // add new picture
   HTML = '<%= j render "components/thumnail_pic", pic: Picture.all.last.pic %>'
   const picsDiv = document.getElementById('add-icon');
   picsDiv.insertAdjacentHTML('afterend', HTML);
   const placeHolderDiv = document.querySelector('.user_photos_error')
   placeHolderDiv.classList.add('no-show')
+  // remove spinning circle
+  setTimeout(function () {
+    let pics_title_wrapper = document.querySelector('.picture-title');
+    pics_title_wrapper.innerHTML = '<h3>PICTURES</h3>'
+  }, 1000);
+
 }
 
 addPicture()
