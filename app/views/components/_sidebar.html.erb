@@ -10,6 +10,11 @@
           <div id="dismiss">
             <i class="fas fa-bars shadowless" id="blue-burger"></i>
           </div>
+          <div id="link-about">
+            <%= link_to about_path, id: "about-us" do %>
+              <h2>ABOUT</h2>
+            <% end %>
+          </div>
 
           <div class="sidebar-content">
             <% if current_user %>

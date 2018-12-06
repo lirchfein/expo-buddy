@@ -52,6 +52,24 @@
   // flex-direction: column;
   // justify-content: space-between;
 }
+#link-about {
+  position: absolute;
+  right: 5%;
+  top: 0%;
+}
+
+#about-us {
+  h2 {
+    font-size: 20px;
+    color: $primary-dark;
+    font-weight: 300;
+  }
+  h2:hover, h2:active, h2:visited, h2:focus {
+    text-decoration: underline;
+    text-decoration-color: $primary-dark;
+    font-weight:800;
+  }
+}
 
 .sidebar-header {
   display: flex;
