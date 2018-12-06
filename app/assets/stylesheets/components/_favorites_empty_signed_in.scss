@@ -1,13 +1,16 @@
 #sign_in_button {
   align-items: center;
+  margin: 0 auto;
   a{
-    margin-top: 5px;
+    margin-top: 20px;
     color: black;
     &:hover{
       color: white;
+      background-color: $primary-dark;
     }
   }
 }
+
 
 .no-favorites {
   display: flex;

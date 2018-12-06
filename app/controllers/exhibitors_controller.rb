@@ -2,8 +2,12 @@ class ExhibitorsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
   def index
     @expo = Expo.find(params[:expo_id])
-    @current_favorites = Favorite.get_expo(current_user, @expo)
-    @visited_favorites = Favorite.visited_exhibitors(current_user, @current_favorites)
+    if current_user
+      @current_favorites = Favorite.get_expo(current_user, @expo)
+      @visited_favorites = Favorite.visited_exhibitors(current_user, @current_favorites)
+    else
+      @current_favorites = []
+    end
     if params[:query].present?
       @exhibitors = @expo.exhibitors.order_by_name.search_by_name_and_description(params[:query]).page(params[:page])
     else

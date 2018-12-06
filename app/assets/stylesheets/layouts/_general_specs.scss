@@ -15,10 +15,10 @@ body {
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 22px;
   }
   p {
-    font-size: 14px;
+    font-size: 18px;
   }
   .icon-shadow {
     text-shadow: 0px 0px 2px #333333;
@@ -31,6 +31,20 @@ body {
   .bold-header {
     font-weight: 700;
   }
+
+  // to be removed after demo on projector
+  .bold-btn-border {
+    border: solid 2px $primary-dark;
+  }
+}
+
+.md-margin-top-bottom {
+  margin: 20px 0 30px;
+}
+
+.max-width-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 

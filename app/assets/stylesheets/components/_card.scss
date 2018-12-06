@@ -23,8 +23,10 @@
   }
   p {
     margin: 0;
-    font-weight: 600;
     font-size: 13px;
+    // to be removed after demo on projector
+    font-size: 17px;
+
   }
 }
 
@@ -37,6 +39,12 @@
   &:hover {
     color: inherit;
   }
+}
+
+.bookmark-container a {
+  padding: 45px;
+  min-width: 45px;
+  padding-right: 0px;
 }
 
 .bookmark-card {
