@@ -2,6 +2,7 @@
   width: 120px;
   height: 120px;
   border-radius: 3%;
+  position: relative;
 }
 
 .name-line {
@@ -23,7 +24,7 @@
 }
 
 .md-margin-top {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .max-width-wrapper-about {
@@ -44,6 +45,13 @@
 .flex-wrapper-about {
   display: flex;
   flex-direction: column;
+  a.dt-link {
+    color: $brand-green;
+  }
+  a.mobile-link {
+    color: white;
+  }
+
 }
 
 .overall-flex {
@@ -52,3 +60,43 @@
   justify-content: space-around;
   flex-direction: column;
 }
+
+.mobile-link {
+  display: none;
+  height: 19px;
+}
+
+.explanatory-text-about {
+  margin: 50px 20px;
+}
+
+@media only screen and (max-width: 540px) {
+  .right-align {
+    display: none;
+  }
+  .left-align {
+    display: none;
+  }
+  .mobile-link {
+    display: block;
+    position: absolute;
+  }
+  #marton {
+    bottom: 12px;
+    right: 5px;
+  }
+  #sophie {
+    bottom: 12px;
+    right: 5px;
+  }
+  #wiebke {
+    bottom: 12px;
+    right: 5px;
+  }
+  #paul {
+    bottom: 12px;
+    right: 5px;
+  }
+}
+
+
