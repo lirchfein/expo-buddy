@@ -25,17 +25,35 @@
     font-size: 14px;
     display: inline-block;
   }
+  i {
+    color: $primary-dark;
+  }
 }
 
 .relative-container {
   position: relative;
   height: 100vh;
+  background-image: url("https://res.cloudinary.com/dfcud6por/image/upload/v1544111701/expo-buddy/logos/rectangle-sidebar-bottom.svg"),
+  url("https://res.cloudinary.com/dfcud6por/image/upload/v1544112979/expo-buddy/logos/rectangle-top-sidebar.svg");
+  background-position: left bottom, left top;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .nav-content-flex {
   // display: flex;
   // flex-direction: column;
   // justify-content: space-between;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10%;
+  h2 {
+  font-size : 26px;
+  font-weight: 300;
+  }
 }
 
 .sidebar-content {
@@ -98,7 +116,6 @@ a[data-toggle="collapse"] {
 #blue-burger {
   color: $primary-dark;
 }
-
 
 .overlay {
     display: none;
