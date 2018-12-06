@@ -1,0 +1,41 @@
+ .user_photos_error{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  opacity: 0.21;
+  height: 6vh;
+  div{
+    text-align: inherit;
+  }
+}
+
+.photo-icon-div {
+  display: flex;
+  margin: 0 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  p{
+    margin: 0;
+  }
+}
+
+.user_memos_error {
+  display: flex;
+  text-align: center;
+  opacity: 0.21;
+  height: 6vh;
+  div{
+    text-align: inherit;
+  }
+}
+
+.no-memos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  p{
+    margin: 0;
+  }
+}

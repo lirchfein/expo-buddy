@@ -2,6 +2,8 @@ function addPicture() {
   HTML = '<%= j render "components/thumnail_pic", pic: Picture.all.last.pic %>'
   const picsDiv = document.getElementById('add-icon');
   picsDiv.insertAdjacentHTML('afterend', HTML);
+  const placeHolderDiv = document.querySelector('.user_photos_error')
+  placeHolderDiv.classList.add('no-show')
 }
 
 addPicture()

@@ -2,6 +2,8 @@ function showNewNote() {
   HTML = '<%= j render "components/memo", note: Note.all.last %>'
   const noteDiv = document.getElementById('memo-block');
   noteDiv.insertAdjacentHTML('afterbegin', HTML);
+  const placeholderDiv = document.querySelector('.user_memos_error')
+  placeholderDiv.classList.add('no-show')
 }
 
 showNewNote();
