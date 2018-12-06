@@ -55,15 +55,19 @@
 }
 
 #user-email-p{
-  margin-left: 31%;
   margin-top: 15px !important;
   margin-bottom: 15px !important;
   font-weight: bolder;
 }
 
-  #modal-button-email{
+#modal-button-email{
   background-color: transparent;
   border: none;
   border-radius: 50%;
   padding: 0;
+}
+
+.email-div{
+  display: flex;
+  justify-content: center;
 }
