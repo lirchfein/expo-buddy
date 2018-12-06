@@ -15,7 +15,7 @@ function clickPhotoUploadButton() {
 }
 
 function addEventListenersToPhotoUploadBtn() {
-  const add_icon_button = document.getElementById('add-icon')
+  const add_icon_button = document.getElementById('photo-upload')
   add_icon_button.addEventListener('click', clickPhotoUploadButton)
 }
 

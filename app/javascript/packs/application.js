@@ -21,3 +21,6 @@ addEventListenersToExhibitorTabs();
 
 import "actiontext";
 import "../../../node_modules/trix/dist/trix.css"
+
+import { magicButton } from '../components/floating-action-button.js';
+magicButton();

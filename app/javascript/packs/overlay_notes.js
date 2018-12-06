@@ -11,7 +11,7 @@ function clickToCloseNote() {
 }
 
 function addEventListenersToDisplayNoteBtn() {
-  const add_note_button = document.getElementById('display-overlay')
+  const add_note_button = document.getElementById('add-notey')
   add_note_button.addEventListener('click', clickToDisplayNote)
 }
 
