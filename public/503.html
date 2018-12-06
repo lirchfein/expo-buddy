@@ -314,27 +314,28 @@
 
   </head>
   <body class="background error-page-wrapper background-color background-image">
-    <center>
-  <div class="content-container shadow">
-    <div class="head-line secondary-text-color">
-      404
-    </div>
-    <div class="subheader primary-text-color">
-      Oops, the page you're looking for does not exist.
-    </div>
-    <div class="hr"></div>
-    <div class="context secondary-text-color">
-      <p>
-        You may want to head back to the homepage.
-        If you think something is broken, report a problem.
-      </p>
-    </div>
-    <div class="buttons-container">
-      <a class="button" href="http://www.expo-buddy.com/" target="_blank"><span class="fa fa-home"></span> Go To Homepage</a>
-      <a class="button" href="mailto:hello@expo-buddy.com" target="_blank"><span class="fa fa-warning"></span> Report A Problem</a>
-    </div>
+    	
+<div class="content-container shadow">
+	<div class="head-line secondary-text-color">
+		503
+	</div>
+	<div class="subheader primary-text-color">
+		Looks like we're having some server issues.
+	</div>
+	<div class="hr"></div>
+  <div class="context secondary-text-color">
+    
+    <p>
+      Go back to the previous page and try again.
+      If you think something is broken, report a problem.
+    </p>
+
+
   </div>
-</center>
+	<div class="buttons-container single-button">
+		<a class="button" href="mailto:hello@expo-buddy.com" target="_blank"><span class="fa fa-warning"></span> Report A Problem</a>
+	</div>
+</div>
 
 
     <script>
@@ -441,7 +442,7 @@
        });
 
      };
-     var ep = new ErrorPage('body', "404", "background");
+     var ep = new ErrorPage('body', "503", "background");
      ep.initialize();
 
      // hack to make sure content stays centered >_<
