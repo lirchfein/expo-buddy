@@ -7,14 +7,12 @@
 
   <%= render 'components/exhibitor_banner', exhibitor: @exhibitor %>
 
-
   <div class="exhibitor-description <%= 'no-show' if @favorite %>">
     <h3>LOCATION</h3>
-    <p ><%=  @exhibitor.location %></p>
+    <p><%=  @exhibitor.location %></p>
     <h3>DESCRIPTION</h3>
-    <p ><%= @exhibitor.description %></p>
+    <p><%= @exhibitor.description %></p>
   </div>
-
 
   <div class="exhibitor-user-page <%= 'no-show' unless @favorite %>">
 
@@ -28,7 +26,6 @@
         </div>
       </div>
     <% else %>
-
       <div id="pictures-container">
           <%= render 'pictures_area' %>
       </div>
