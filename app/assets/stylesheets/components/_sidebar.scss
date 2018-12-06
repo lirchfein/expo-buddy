@@ -39,6 +39,14 @@
   background-repeat: no-repeat, no-repeat;
 }
 
+.foot-prints-login {
+  background-image: url("https://res.cloudinary.com/dfcud6por/image/upload/v1544111701/expo-buddy/logos/rectangle-sidebar-bottom.svg"),
+  url("https://res.cloudinary.com/dfcud6por/image/upload/v1544112979/expo-buddy/logos/rectangle-top-sidebar.svg"),
+  url("https://res.cloudinary.com/dfcud6por/image/upload/c_crop,h_463,w_311/v1544115758/expo-buddy/logos/grid-sidebar.png");
+  background-position: left bottom, left top, left bottom;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
 .nav-content-flex {
   // display: flex;
   // flex-direction: column;
@@ -163,11 +171,47 @@ a[data-toggle="collapse"] {
   }
 }
 
+#log-in-div {
+  margin-top: 200px;
+  margin-left: 20px;
+  position: absolute;
+  bottom: 10px;
+  i {
+    font-size: 18px;
+    padding: 0;
+  }
+  h3 {
+    margin-bottom: 0;
+    margin-top: 11px;
+  }
+  a {
+    color: $primary-dark;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  li {
+    font-weight: 300;
+  }
+}
+
 
 .info-sidebar {
   font-weight: 300;
   margin-top: 30px;
   margin-right: 20px;
+}
+
+.sidebar-center-text {
+  position: relative;
+  top: 25%;
+  color: $primary-dark;
+  padding-left: 20px;
+  padding-right: 20px;
+  h2 {
+    font-size : 26px;
+    font-weight: 300;
+  }
 }
 
 .btn-blank {
@@ -202,4 +246,11 @@ a[data-toggle="collapse"] {
 
 .shadowless {
   text-shadow: 0px 0px 0px !important;
+}
+
+@media only screen and (min-width: 650px) {
+
+  .sidebar-center-text {
+    top: 15%;
+  }
 }
