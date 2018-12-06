@@ -1,0 +1,64 @@
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  border: none;
+  padding-top: 0;
+}
+
+.cancel-button {
+  width: 100px;
+  background-color: rgba(115, 247, 212, -0.9);
+  border: none;
+  color: #C9C9C9;
+  &:hover{
+    background-color: rgba(115, 247, 212, -0.9);
+    color: #160C28 !important;
+  }
+  &:active{
+    box-shadow: none;
+  }
+}
+
+.confirm-button {
+  width: 100px;
+  background-color: rgba(115, 247, 212, -0.9);
+  border-color: #160C28;
+  &:hover {
+    background-color: #160C28;
+  }
+  &:active{
+    box-shadow: none;
+  }
+}
+
+.modal-content {
+  border-radius: 10px;
+  background-color: rgba(115, 247, 212, 0.1);
+
+}
+
+#exampleModal {
+  margin-top: 35%;
+}
+
+.modal-body{
+  padding: 20px;
+  padding-bottom: 0px;
+  p{
+    margin: 0;
+  }
+}
+
+.modal-dialog {
+  border-radius: 10px;
+
+  margin: 20px !important;
+  background-color: white;
+}
+
+#user-email-p{
+  margin-left: 31%;
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+  font-weight: bolder;
+}
