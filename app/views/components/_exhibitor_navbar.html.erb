@@ -9,7 +9,7 @@
     <div class="favorite-cont">
       <div class="white-icons">
       <%# link_to send_data_exhibitor_path(@exhibitor), class:"white-icons" do %>
-        <i class="fas fa-share-alt white-icons" data-toggle="modal" data-target="#exampleModal"></i>
+        <i class="fas fa-share-alt white-icons" <%= 'data-toggle=modal data-target=#exampleModal' if current_user%>></i>
         <%# end %>
         </div>
     </div>
@@ -29,7 +29,7 @@
     <div class="modal-content">
       <div class="modal-body">
         <p>Please confirm the export of all notes collected for <%= @exhibitor.name %>. A PDF will be send to your account’s email address:</p>
-        <p id= 'user-email-p'><%= current_user.email %></p>
+        <p id= 'user-email-p'><%= current_user.email if current_user%></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-blank cancel-button" data-dismiss="modal">Cancel</button>
