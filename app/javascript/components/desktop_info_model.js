@@ -7,7 +7,7 @@ function infoModalShow() {
 }
 
 function removeModal() {
-  if (window.innerWidth < 401 && document.getElementById('modal-button-desktop-info')) {
+  if (window.innerWidth < 460 && document.getElementById('modal-button-desktop-info')) {
     $('#infoModal').modal('hide')
   }
 }
