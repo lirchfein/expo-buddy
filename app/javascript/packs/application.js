@@ -26,3 +26,9 @@ magicButton();
 // import "../../../node_modules/masonry-layout/masonry.js"
 import { flashMessageEmail } from '../components/_flash_message_email.js';
 flashMessageEmail();
+
+import { infoModalShow } from '../components/desktop_info_model.js';
+infoModalShow();
+
+import { addEventListenerToWindowResize } from '../components/desktop_info_model.js';
+addEventListenerToWindowResize();
