@@ -9,8 +9,16 @@
     <div class="favorite-cont">
       <div class="white-icons">
         <%# link_to send_data_exhibitor_path(@exhibitor), class:"white-icons" do %>
-        <button id= 'modal-button-email' <%= 'data-toggle=modal data-target=#exampleModal' if current_user%>>
-          <i class="fas fa-share-alt white-icons"></i>
+        <% if current_user %>
+          <button id= 'modal-button-email' data-toggle=modal data-target=#exampleModal>
+            <i class="fas fa-share-alt white-icons"></i>
+          </button>
+        <% end %>
+        <% unless current_user %>
+          <%= link_to new_user_session_path do %>
+            <i class="fas fa-share-alt white-icons"></i>
+          <% end %>
+        <% end %>
         </button>
         <%# end %>
       </div>
