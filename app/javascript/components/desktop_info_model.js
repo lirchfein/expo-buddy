@@ -2,7 +2,7 @@ function infoModalShow() {
   if (window.innerWidth > 600 && sessionStorage["DesktopInfoModalShown"] != 'yes') {
     const infoModalBtn = document.getElementById('modal-button-desktop-info')
     infoModalBtn.click()
-    //sessionStorage["DesktopInfoModalShown"] = 'yes';
+    sessionStorage["DesktopInfoModalShown"] = 'yes';
   }
 }
 
